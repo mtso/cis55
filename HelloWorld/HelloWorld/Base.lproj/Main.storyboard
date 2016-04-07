@@ -54,6 +54,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="btnLabel" destination="BKO-Jw-tda" id="kSz-A8-oFg"/>
                         <outlet property="labelText" destination="mLD-80-GvB" id="rKZ-Mk-Ya7"/>
                     </connections>
                 </viewController>

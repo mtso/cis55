@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var labelText: UILabel!
+    @IBOutlet var btnLabel: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,8 @@ class ViewController: UIViewController {
         self.presentViewController(clickAlert, animated: true, completion: nil)
         
         labelText.text = "Button Clicked!"
+        
+        btnLabel.setTitle("Button Clicked!", forState: UIControlState.Normal)
     }
 
 }
