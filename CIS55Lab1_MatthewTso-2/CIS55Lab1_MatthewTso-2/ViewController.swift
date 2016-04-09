@@ -49,7 +49,7 @@ class ViewController: UIViewController, UITextViewDelegate {
     
     // Set the background color of the disabled button to light gray.
     func disableButton() {
-        retweetButton.backgroundColor = UIColor.lightGrayColor()
+        retweetButton.backgroundColor = UIColor(red:0.90, green:0.90, blue:0.90, alpha:1.0)
         retweetButton.enabled = false
     }
     
@@ -88,7 +88,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         // Enable the retweet button when text is added into the UITextView.
         // Disable the retweet button if there is no text after the text manipulation.
         if (messageText.text?.characters.count > 0) {
-            retweetButton.backgroundColor = UIColor(red:0.10, green:0.92, blue:0.62, alpha:1.0)
+            retweetButton.backgroundColor = UIColor(red:0.00, green:0.90, blue:0.65, alpha:1.0)
             retweetButton.enabled = true
         } else {
             disableButton()
