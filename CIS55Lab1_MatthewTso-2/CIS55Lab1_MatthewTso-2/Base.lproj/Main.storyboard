@@ -38,7 +38,8 @@
                                         <exclude reference="nDt-UB-gKT"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact">
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="32" y="33" width="336" height="196"/>
                                     <mask key="constraints">
                                         <include reference="nDt-UB-gKT"/>
                                     </mask>
@@ -143,13 +144,13 @@
                                 <variation key="widthClass=compact" constant="-20"/>
                             </constraint>
                             <constraint firstItem="1oW-gD-0cy" firstAttribute="top" secondItem="P41-wW-MwR" secondAttribute="bottom" id="uTf-xy-mat">
-                                <variation key="widthClass=compact" constant="46"/>
+                                <variation key="widthClass=compact" constant="38"/>
                             </constraint>
                             <constraint firstItem="pLA-Bg-Dee" firstAttribute="trailing" secondItem="1oW-gD-0cy" secondAttribute="trailing" id="zGW-q6-Hjb">
                                 <variation key="widthClass=compact" constant="-22"/>
                             </constraint>
                             <constraint firstItem="P41-wW-MwR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zaR-JC-6JW">
-                                <variation key="widthClass=compact" constant="32"/>
+                                <variation key="widthClass=compact" constant="40"/>
                             </constraint>
                         </constraints>
                         <variation key="default">
