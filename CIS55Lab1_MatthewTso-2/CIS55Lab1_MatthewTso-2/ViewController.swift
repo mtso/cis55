@@ -20,10 +20,10 @@ class ViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // Attach delegate to UITextView
+        // Attach delegate to UITextView.
         messageText.delegate = self
         
-        // Start app with the action button disabled
+        // Start app with the action button disabled.
         disableButton()
     }
 
@@ -36,12 +36,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         retweet()
     }
     
-    func disableButton() {
-        retweetButton.backgroundColor = UIColor.lightGrayColor()
-        retweetButton.enabled = false
-    }
-    
-    // Retweet action moves string from UITextView to UILabel
+    // Retweet action moves string from UITextView to UILabel.
     func retweet() {
         labelText.text = messageText.text
         messageText.text = ""
@@ -52,8 +47,21 @@ class ViewController: UIViewController, UITextViewDelegate {
         disableButton()
     }
     
-    /// UITextView Delegate Methods
+    // Set the background color of the disabled button to light gray.
+    func disableButton() {
+        retweetButton.backgroundColor = UIColor.lightGrayColor()
+        retweetButton.enabled = false
+    }
+    
+    // Flash background color of UITextView red. Called when an invalid text manipulation is attempted.
+    func flashRed() {
+        UITextView.animateWithDuration(0.1, animations: {() -> Void in self.messageText.layer.backgroundColor = UIColor.redColor().CGColor}, completion: { _ in })
+        UITextView.animateWithDuration(0.1, animations: {() -> Void in self.messageText.layer.backgroundColor = UIColor.whiteColor().CGColor}, completion: { _ in })
+    }
+    
+    // UITextView Delegate Methods.
     func textViewDidBeginEditing(textView: UITextView) {
+        // Hide the placeholder label when the UITextView becomes the first responder.
         placeholder.hidden = true
     }
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText newText: String) -> Bool {
@@ -62,30 +70,35 @@ class ViewController: UIViewController, UITextViewDelegate {
             retweet()
             return false
         }
-        // Force maximum 140 characters in UITextView
+        // Force maximum 140 characters in UITextView.
         let currentCharacterCount = textView.text?.characters.count ?? 0
         if (range.length + range.location > currentCharacterCount){
+            flashRed()
             return false
         }
         let newLength = currentCharacterCount + newText.characters.count - range.length
         if (newLength > 140) {
-            // Flash UIButton red to warn user that character limit has been reached.
-            UIView.animateWithDuration(0.1, animations: {() -> Void in self.retweetButton.layer.backgroundColor = UIColor.redColor().CGColor}, completion: { _ in })
-            UIView.animateWithDuration(0.1, animations: {() -> Void in self.retweetButton.layer.backgroundColor = UIColor(red:0.10, green:0.92, blue:0.62, alpha:1.0).CGColor}, completion: { _ in })
+            flashRed()
+            return false
+        } else {
+            return true
         }
-        return newLength <= 140
     }
     func textViewDidChange(textView: UITextView) {
+        // Enable the retweet button when text is added into the UITextView.
+        // Disable the retweet button if there is no text after the text manipulation.
         if (messageText.text?.characters.count > 0) {
             retweetButton.backgroundColor = UIColor(red:0.10, green:0.92, blue:0.62, alpha:1.0)
             retweetButton.enabled = true
         } else {
             disableButton()
         }
+        // Show user the remaining characters available in the tweet.
         let charactersLeft = 140 - (messageText.text?.characters.count)!
         retweetButton.setTitle("Retweet After Me   " + String(charactersLeft), forState: .Normal)
     }
     func textViewDidEndEditing(textView: UITextView) {
+        // Display placeholder label if the UITextView is empty upon resigning as first responder.
         if (messageText.text.characters.count == 0) {
             placeholder.hidden = false
         }
