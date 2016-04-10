@@ -47,22 +47,27 @@ class ViewController: UIViewController, UITextViewDelegate {
     }
     
     func retweet() {
-        // Copy message text to output label.
-        outputLabel.text = message.text
-        
-        // Animate output label flip.
-        UIView.transitionWithView(outputLabel, duration: 0.5, options: [.TransitionFlipFromBottom], animations: nil, completion: nil)
-        
-        // Clear UITextView.
-        message.text = ""
-        message.resignFirstResponder()
-        
-        // Reset retweet button.
-        UIView.setAnimationsEnabled(false)
-        retweetButton.setTitle("Retweet After Me   140", forState: .Normal)
-        retweetButton.layoutIfNeeded()
-        UIView.setAnimationsEnabled(true)
-        disableButton()
+        // Check if there is text in the UITextView.
+        if (message.text == "") {
+            textViewWarning()
+        } else {
+            // Copy message text to output label.
+            outputLabel.text = message.text
+            
+            // Animate output label flip.
+            UIView.transitionWithView(outputLabel, duration: 0.5, options: [.TransitionFlipFromBottom], animations: nil, completion: nil)
+            
+            // Clear UITextView.
+            message.text = ""
+            message.resignFirstResponder()
+            
+            // Reset retweet button.
+            UIView.setAnimationsEnabled(false)
+            retweetButton.setTitle("Retweet After Me   140", forState: .Normal)
+            retweetButton.layoutIfNeeded()
+            UIView.setAnimationsEnabled(true)
+            disableButton()
+        }
     }
     
     func disableButton() {
@@ -138,13 +143,18 @@ class ViewController: UIViewController, UITextViewDelegate {
             retweet()
             return false
         }
+        
         // Force maximum 140 characters in UITextView.
         let currentCharacterCount = textView.text?.characters.count ?? 0
+        
+        // Check if the range to replace is in the current string to protect against the system attempting to undo a previously invalidated paste operation.
         if (range.length + range.location > currentCharacterCount){
-            textViewWarning()
+            print("Range does not exist in current character")
+            //textViewWarning()
             return false
         }
-        // I assume the following protects the undo buffer from pasting a string into the UITextView.
+        
+        // Prevent the text change if the new string exceeds 140 characters.
         let newLength = currentCharacterCount + newText.characters.count - range.length
         if (newLength > 140) {
             textViewWarning()
@@ -155,11 +165,11 @@ class ViewController: UIViewController, UITextViewDelegate {
     }
     func textViewDidChange(textView: UITextView) {
         // Enable the retweet button when text is added into the UITextView.
-        // Disable the retweet button if there is no text after the text manipulation.
         if (message.text?.characters.count > 0) {
             retweetButton.backgroundColor = UIColor(red:0.00, green:0.90, blue:0.65, alpha:1.0)
             retweetButton.enabled = true
         } else {
+            // Disable the retweet button if there is no text after the text manipulation.
             disableButton()
         }
         
