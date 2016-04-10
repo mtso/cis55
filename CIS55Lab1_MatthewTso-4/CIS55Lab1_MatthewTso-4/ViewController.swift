@@ -14,9 +14,10 @@ class ViewController: UIViewController, UITextViewDelegate {
     @IBOutlet var editPanel: UIView!
     @IBOutlet var placeholder: UILabel!
     @IBOutlet var message: UITextView!
-    @IBOutlet var panelHeight: NSLayoutConstraint!
+    @IBOutlet var panelBottom: NSLayoutConstraint!
     @IBOutlet var retweetButton: UIButton!
     
+    var tap: UITapGestureRecognizer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,9 @@ class ViewController: UIViewController, UITextViewDelegate {
         editPanel.layer.shadowOffset = CGSizeMake(0.0, 0.0)
         editPanel.layer.shadowRadius = 10.0
         editPanel.layer.shadowOpacity = 0.0
+        
+        // Set up gesture recognizer.
+        tap = UITapGestureRecognizer(target: self, action: "dismissEditPanel")
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,6 +71,9 @@ class ViewController: UIViewController, UITextViewDelegate {
             retweetButton.layoutIfNeeded()
             UIView.setAnimationsEnabled(true)
             disableButton()
+            
+            // Show placeholder label.
+            placeholder.hidden = false
         }
     }
     
@@ -94,6 +101,14 @@ class ViewController: UIViewController, UITextViewDelegate {
         editPanel.layer.addAnimation(borderOff, forKey: "borderWidth")
     }
     
+    func dismissEditPanel() {
+        message.resignFirstResponder()
+        self.view.removeGestureRecognizer(tap)
+    }
+    
+    /*
+     * Method that receives the keyboard frame change notification.
+     */
     func keyboardWillChange(notification: NSNotification) {
         // Get the start and end frame of the keyboard animation in CGRect.
         let keyboardSizeBegin = (notification.userInfo![UIKeyboardFrameBeginUserInfoKey] as! NSValue).CGRectValue()
@@ -102,8 +117,9 @@ class ViewController: UIViewController, UITextViewDelegate {
         // Calculate height change in keyboard position.
         let deltaHeight = keyboardSizeBegin.origin.y - keyboardSizeEnd.origin.y
         
+        
         // Add height change to panel constraint.
-        self.panelHeight.constant += deltaHeight
+        self.panelBottom.constant += deltaHeight
         self.editPanel.setNeedsUpdateConstraints()
         
         // Get duration of keyboard animation.
@@ -135,7 +151,9 @@ class ViewController: UIViewController, UITextViewDelegate {
         
         // Show edit panel shadow after animation.
         editPanel.layer.shadowOpacity = 0.4
-
+        
+        // Add gesture recognizer for tap outside of edit panel.
+        self.view.addGestureRecognizer(tap)
     }
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText newText: String) -> Bool {
         // Return Key calls retweet action.
@@ -166,7 +184,7 @@ class ViewController: UIViewController, UITextViewDelegate {
     func textViewDidChange(textView: UITextView) {
         // Enable the retweet button when text is added into the UITextView.
         if (message.text?.characters.count > 0) {
-            retweetButton.backgroundColor = UIColor(red:0.00, green:0.90, blue:0.65, alpha:1.0)
+            retweetButton.backgroundColor = UIColor(red:0.00, green:0.85, blue:0.55, alpha:1.0)
             retweetButton.enabled = true
         } else {
             // Disable the retweet button if there is no text after the text manipulation.

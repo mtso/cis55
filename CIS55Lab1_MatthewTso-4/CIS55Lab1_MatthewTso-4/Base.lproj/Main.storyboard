@@ -18,6 +18,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4LM-7U-XMG">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="Yiw-88-GEy">
+                                        <variation key="widthClass=compact" constant="0.0"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Yiw-88-GEy"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Yiw-88-GEy"/>
+                                    </mask>
+                                </variation>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AM2-r8-yOc">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
@@ -148,45 +169,30 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4LM-7U-XMG">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="Yiw-88-GEy">
-                                        <variation key="widthClass=compact" constant="0.0"/>
-                                    </constraint>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Yiw-88-GEy"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="Yiw-88-GEy"/>
-                                    </mask>
-                                </variation>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.16526230519999999" green="0.66384189989999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="AM2-r8-yOc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CWx-2l-EtO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="4LM-7U-XMG" secondAttribute="trailing" constant="30" id="PKO-zF-C51"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4LM-7U-XMG" secondAttribute="trailing" constant="30" id="PKO-zF-C51">
+                                <variation key="widthClass=compact" constant="20"/>
+                            </constraint>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4LM-7U-XMG" secondAttribute="bottom" constant="356" id="aDx-ec-umT">
-                                <variation key="widthClass=compact" constant="266"/>
+                                <variation key="widthClass=compact" constant="258"/>
                             </constraint>
                             <constraint firstAttribute="bottom" secondItem="AM2-r8-yOc" secondAttribute="bottom" id="c82-0x-Omv"/>
-                            <constraint firstItem="4LM-7U-XMG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" id="qbo-4n-5kI"/>
+                            <constraint firstItem="4LM-7U-XMG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" id="qbo-4n-5kI">
+                                <variation key="widthClass=compact" constant="32"/>
+                            </constraint>
                             <constraint firstItem="4LM-7U-XMG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rna-yT-YcN"/>
-                            <constraint firstItem="4LM-7U-XMG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="uaQ-gK-j7G"/>
+                            <constraint firstItem="4LM-7U-XMG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="uaQ-gK-j7G">
+                                <variation key="widthClass=compact" constant="20"/>
+                            </constraint>
                             <constraint firstItem="AM2-r8-yOc" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="wQB-is-Qf6"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="AM2-r8-yOc"/>
                                 <exclude reference="4LM-7U-XMG"/>
+                                <exclude reference="AM2-r8-yOc"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="PKO-zF-C51"/>
@@ -201,8 +207,8 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="AM2-r8-yOc"/>
                                 <include reference="4LM-7U-XMG"/>
+                                <include reference="AM2-r8-yOc"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="PKO-zF-C51"/>
@@ -220,7 +226,7 @@
                         <outlet property="editPanel" destination="AM2-r8-yOc" id="iBU-qd-L5y"/>
                         <outlet property="message" destination="RZv-ID-db8" id="IM1-3n-7SJ"/>
                         <outlet property="outputLabel" destination="4LM-7U-XMG" id="tKm-tg-9kb"/>
-                        <outlet property="panelHeight" destination="rdH-Yo-UjJ" id="egc-2z-r01"/>
+                        <outlet property="panelBottom" destination="c82-0x-Omv" id="Ctp-Gl-xgi"/>
                         <outlet property="placeholder" destination="xrd-iB-IHi" id="5vX-Ko-j9H"/>
                         <outlet property="retweetButton" destination="7wb-TX-KjW" id="K47-KQ-5xg"/>
                     </connections>
