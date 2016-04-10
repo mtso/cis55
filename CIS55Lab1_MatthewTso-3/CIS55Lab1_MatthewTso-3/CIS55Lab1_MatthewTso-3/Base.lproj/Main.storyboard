@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CIS55Lab1_MatthewTso_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aff-Yd-nrv">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y4e-vf-ZBc">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <color key="backgroundColor" red="0.16526230519999999" green="0.66384189989999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="y4e-vf-ZBc" firstAttribute="centerX" secondItem="aff-Yd-nrv" secondAttribute="centerX" id="ASA-JG-Ftl"/>
+                                    <constraint firstAttribute="bottom" secondItem="y4e-vf-ZBc" secondAttribute="bottom" constant="537" id="Fvn-2s-e31">
+                                        <variation key="widthClass=compact" constant="300"/>
+                                    </constraint>
+                                    <constraint firstItem="y4e-vf-ZBc" firstAttribute="top" secondItem="aff-Yd-nrv" secondAttribute="top" id="Wbj-6z-Ygc"/>
+                                    <constraint firstItem="y4e-vf-ZBc" firstAttribute="width" secondItem="aff-Yd-nrv" secondAttribute="width" id="zRV-R6-Ep8"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="y4e-vf-ZBc"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="ASA-JG-Ftl"/>
+                                        <exclude reference="Fvn-2s-e31"/>
+                                        <exclude reference="Wbj-6z-Ygc"/>
+                                        <exclude reference="zRV-R6-Ep8"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" ambiguous="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                                    <mask key="subviews">
+                                        <include reference="y4e-vf-ZBc"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="ASA-JG-Ftl"/>
+                                        <include reference="Fvn-2s-e31"/>
+                                        <include reference="Wbj-6z-Ygc"/>
+                                        <include reference="zRV-R6-Ep8"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aff-Yd-nrv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3yE-Gl-xP8"/>
+                            <constraint firstItem="aff-Yd-nrv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C5B-Xo-Fdk"/>
+                            <constraint firstItem="aff-Yd-nrv" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="LRA-lX-vuu"/>
+                            <constraint firstItem="aff-Yd-nrv" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="UN6-I5-t42"/>
+                            <constraint firstItem="aff-Yd-nrv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="cI0-Dy-ZbZ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="aff-Yd-nrv"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="3yE-Gl-xP8"/>
+                                <exclude reference="C5B-Xo-Fdk"/>
+                                <exclude reference="LRA-lX-vuu"/>
+                                <exclude reference="UN6-I5-t42"/>
+                                <exclude reference="cI0-Dy-ZbZ"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="aff-Yd-nrv"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3yE-Gl-xP8"/>
+                                <include reference="C5B-Xo-Fdk"/>
+                                <include reference="LRA-lX-vuu"/>
+                                <include reference="UN6-I5-t42"/>
+                                <include reference="cI0-Dy-ZbZ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="aff-Yd-nrv" id="YVo-kX-VJy"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="319.5" y="317"/>
+        </scene>
+    </scenes>
+</document>

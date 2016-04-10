@@ -76,11 +76,13 @@ class ViewController: UIViewController, UITextViewDelegate {
             flashRed()
             return false
         }
+        // I assume the following protects the undo buffer from pasting a string into the UITextView
         let newLength = currentCharacterCount + newText.characters.count - range.length
         if (newLength > 140) {
             flashRed()
             return false
         } else {
+            // Finally return true if the text change is approved.
             return true
         }
     }

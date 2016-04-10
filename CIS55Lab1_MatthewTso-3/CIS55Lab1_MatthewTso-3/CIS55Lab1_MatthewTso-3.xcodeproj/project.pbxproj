@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F26E22A1CB9842D00CBBF88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F26E2291CB9842D00CBBF88 /* AppDelegate.swift */; };
-		7F26E22C1CB9842D00CBBF88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F26E22B1CB9842D00CBBF88 /* ViewController.swift */; };
-		7F26E2311CB9842D00CBBF88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F26E2301CB9842D00CBBF88 /* Assets.xcassets */; };
-		7F26E2341CB9842D00CBBF88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F26E2321CB9842D00CBBF88 /* LaunchScreen.storyboard */; };
-		7F26E23C1CB9AAC900CBBF88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F26E23B1CB9AAC900CBBF88 /* Main.storyboard */; };
+		7F26E24A1CB9AB4A00CBBF88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F26E2491CB9AB4A00CBBF88 /* AppDelegate.swift */; };
+		7F26E24C1CB9AB4A00CBBF88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F26E24B1CB9AB4A00CBBF88 /* ViewController.swift */; };
+		7F26E24F1CB9AB4A00CBBF88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F26E24D1CB9AB4A00CBBF88 /* Main.storyboard */; };
+		7F26E2511CB9AB4A00CBBF88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F26E2501CB9AB4A00CBBF88 /* Assets.xcassets */; };
+		7F26E2541CB9AB4A00CBBF88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F26E2521CB9AB4A00CBBF88 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7F26E2261CB9842D00CBBF88 /* CIS55Lab1_MatthewTso-3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CIS55Lab1_MatthewTso-3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7F26E2291CB9842D00CBBF88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7F26E22B1CB9842D00CBBF88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7F26E2301CB9842D00CBBF88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7F26E2331CB9842D00CBBF88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7F26E2351CB9842D00CBBF88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7F26E23B1CB9AAC900CBBF88 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7F26E2461CB9AB4A00CBBF88 /* CIS55Lab1_MatthewTso-3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CIS55Lab1_MatthewTso-3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F26E2491CB9AB4A00CBBF88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7F26E24B1CB9AB4A00CBBF88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7F26E24E1CB9AB4A00CBBF88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7F26E2501CB9AB4A00CBBF88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7F26E2531CB9AB4A00CBBF88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7F26E2551CB9AB4A00CBBF88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7F26E2231CB9842D00CBBF88 /* Frameworks */ = {
+		7F26E2431CB9AB4A00CBBF88 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,31 +35,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7F26E21D1CB9842D00CBBF88 = {
+		7F26E23D1CB9AB4A00CBBF88 = {
 			isa = PBXGroup;
 			children = (
-				7F26E2281CB9842D00CBBF88 /* CIS55Lab1_MatthewTso-3 */,
-				7F26E2271CB9842D00CBBF88 /* Products */,
+				7F26E2481CB9AB4A00CBBF88 /* CIS55Lab1_MatthewTso-3 */,
+				7F26E2471CB9AB4A00CBBF88 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		7F26E2271CB9842D00CBBF88 /* Products */ = {
+		7F26E2471CB9AB4A00CBBF88 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7F26E2261CB9842D00CBBF88 /* CIS55Lab1_MatthewTso-3.app */,
+				7F26E2461CB9AB4A00CBBF88 /* CIS55Lab1_MatthewTso-3.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7F26E2281CB9842D00CBBF88 /* CIS55Lab1_MatthewTso-3 */ = {
+		7F26E2481CB9AB4A00CBBF88 /* CIS55Lab1_MatthewTso-3 */ = {
 			isa = PBXGroup;
 			children = (
-				7F26E2291CB9842D00CBBF88 /* AppDelegate.swift */,
-				7F26E22B1CB9842D00CBBF88 /* ViewController.swift */,
-				7F26E23B1CB9AAC900CBBF88 /* Main.storyboard */,
-				7F26E2301CB9842D00CBBF88 /* Assets.xcassets */,
-				7F26E2321CB9842D00CBBF88 /* LaunchScreen.storyboard */,
-				7F26E2351CB9842D00CBBF88 /* Info.plist */,
+				7F26E2491CB9AB4A00CBBF88 /* AppDelegate.swift */,
+				7F26E24B1CB9AB4A00CBBF88 /* ViewController.swift */,
+				7F26E24D1CB9AB4A00CBBF88 /* Main.storyboard */,
+				7F26E2501CB9AB4A00CBBF88 /* Assets.xcassets */,
+				7F26E2521CB9AB4A00CBBF88 /* LaunchScreen.storyboard */,
+				7F26E2551CB9AB4A00CBBF88 /* Info.plist */,
 			);
 			path = "CIS55Lab1_MatthewTso-3";
 			sourceTree = "<group>";
@@ -67,13 +67,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7F26E2251CB9842D00CBBF88 /* CIS55Lab1_MatthewTso-3 */ = {
+		7F26E2451CB9AB4A00CBBF88 /* CIS55Lab1_MatthewTso-3 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7F26E2381CB9842D00CBBF88 /* Build configuration list for PBXNativeTarget "CIS55Lab1_MatthewTso-3" */;
+			buildConfigurationList = 7F26E2581CB9AB4A00CBBF88 /* Build configuration list for PBXNativeTarget "CIS55Lab1_MatthewTso-3" */;
 			buildPhases = (
-				7F26E2221CB9842D00CBBF88 /* Sources */,
-				7F26E2231CB9842D00CBBF88 /* Frameworks */,
-				7F26E2241CB9842D00CBBF88 /* Resources */,
+				7F26E2421CB9AB4A00CBBF88 /* Sources */,
+				7F26E2431CB9AB4A00CBBF88 /* Frameworks */,
+				7F26E2441CB9AB4A00CBBF88 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -81,26 +81,26 @@
 			);
 			name = "CIS55Lab1_MatthewTso-3";
 			productName = "CIS55Lab1_MatthewTso-3";
-			productReference = 7F26E2261CB9842D00CBBF88 /* CIS55Lab1_MatthewTso-3.app */;
+			productReference = 7F26E2461CB9AB4A00CBBF88 /* CIS55Lab1_MatthewTso-3.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		7F26E21E1CB9842D00CBBF88 /* Project object */ = {
+		7F26E23E1CB9AB4A00CBBF88 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = DeAnza;
 				TargetAttributes = {
-					7F26E2251CB9842D00CBBF88 = {
+					7F26E2451CB9AB4A00CBBF88 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = RZ2DT6A2TM;
 					};
 				};
 			};
-			buildConfigurationList = 7F26E2211CB9842D00CBBF88 /* Build configuration list for PBXProject "CIS55Lab1_MatthewTso-3" */;
+			buildConfigurationList = 7F26E2411CB9AB4A00CBBF88 /* Build configuration list for PBXProject "CIS55Lab1_MatthewTso-3" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -108,46 +108,54 @@
 				en,
 				Base,
 			);
-			mainGroup = 7F26E21D1CB9842D00CBBF88;
-			productRefGroup = 7F26E2271CB9842D00CBBF88 /* Products */;
+			mainGroup = 7F26E23D1CB9AB4A00CBBF88;
+			productRefGroup = 7F26E2471CB9AB4A00CBBF88 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7F26E2251CB9842D00CBBF88 /* CIS55Lab1_MatthewTso-3 */,
+				7F26E2451CB9AB4A00CBBF88 /* CIS55Lab1_MatthewTso-3 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7F26E2241CB9842D00CBBF88 /* Resources */ = {
+		7F26E2441CB9AB4A00CBBF88 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F26E23C1CB9AAC900CBBF88 /* Main.storyboard in Resources */,
-				7F26E2341CB9842D00CBBF88 /* LaunchScreen.storyboard in Resources */,
-				7F26E2311CB9842D00CBBF88 /* Assets.xcassets in Resources */,
+				7F26E2541CB9AB4A00CBBF88 /* LaunchScreen.storyboard in Resources */,
+				7F26E2511CB9AB4A00CBBF88 /* Assets.xcassets in Resources */,
+				7F26E24F1CB9AB4A00CBBF88 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7F26E2221CB9842D00CBBF88 /* Sources */ = {
+		7F26E2421CB9AB4A00CBBF88 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F26E22C1CB9842D00CBBF88 /* ViewController.swift in Sources */,
-				7F26E22A1CB9842D00CBBF88 /* AppDelegate.swift in Sources */,
+				7F26E24C1CB9AB4A00CBBF88 /* ViewController.swift in Sources */,
+				7F26E24A1CB9AB4A00CBBF88 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7F26E2321CB9842D00CBBF88 /* LaunchScreen.storyboard */ = {
+		7F26E24D1CB9AB4A00CBBF88 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7F26E2331CB9842D00CBBF88 /* Base */,
+				7F26E24E1CB9AB4A00CBBF88 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7F26E2521CB9AB4A00CBBF88 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F26E2531CB9AB4A00CBBF88 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -155,7 +163,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		7F26E2361CB9842D00CBBF88 /* Debug */ = {
+		7F26E2561CB9AB4A00CBBF88 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -199,7 +207,7 @@
 			};
 			name = Debug;
 		};
-		7F26E2371CB9842D00CBBF88 /* Release */ = {
+		7F26E2571CB9AB4A00CBBF88 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -236,7 +244,7 @@
 			};
 			name = Release;
 		};
-		7F26E2391CB9842D00CBBF88 /* Debug */ = {
+		7F26E2591CB9AB4A00CBBF88 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -247,7 +255,7 @@
 			};
 			name = Debug;
 		};
-		7F26E23A1CB9842D00CBBF88 /* Release */ = {
+		7F26E25A1CB9AB4A00CBBF88 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -261,25 +269,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7F26E2211CB9842D00CBBF88 /* Build configuration list for PBXProject "CIS55Lab1_MatthewTso-3" */ = {
+		7F26E2411CB9AB4A00CBBF88 /* Build configuration list for PBXProject "CIS55Lab1_MatthewTso-3" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7F26E2361CB9842D00CBBF88 /* Debug */,
-				7F26E2371CB9842D00CBBF88 /* Release */,
+				7F26E2561CB9AB4A00CBBF88 /* Debug */,
+				7F26E2571CB9AB4A00CBBF88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7F26E2381CB9842D00CBBF88 /* Build configuration list for PBXNativeTarget "CIS55Lab1_MatthewTso-3" */ = {
+		7F26E2581CB9AB4A00CBBF88 /* Build configuration list for PBXNativeTarget "CIS55Lab1_MatthewTso-3" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7F26E2391CB9842D00CBBF88 /* Debug */,
-				7F26E23A1CB9842D00CBBF88 /* Release */,
+				7F26E2591CB9AB4A00CBBF88 /* Debug */,
+				7F26E25A1CB9AB4A00CBBF88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 7F26E21E1CB9842D00CBBF88 /* Project object */;
+	rootObject = 7F26E23E1CB9AB4A00CBBF88 /* Project object */;
 }
