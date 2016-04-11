@@ -167,8 +167,6 @@ class ViewController: UIViewController, UITextViewDelegate {
         
         // Check if the range to replace is in the current string to protect against the system attempting to undo a previously invalidated paste operation.
         if (range.length + range.location > currentCharacterCount){
-            print("Range does not exist in current character")
-            //textViewWarning()
             return false
         }
         
