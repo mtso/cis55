@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  CIS55Lab1_MatthewTso-4
+//  CIS55Lab1_MatthewTso
 //
-//  Created by Matthew Tso on 4/9/16.
+//  Created by Matthew Tso on 4/6/16.
 //  Copyright © 2016 DeAnza. All rights reserved.
 //
 

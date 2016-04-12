@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7F26E2631CB9D5D500CBBF88"
-               BuildableName = "CIS55Lab1_MatthewTso-4.app"
-               BlueprintName = "CIS55Lab1_MatthewTso-4"
-               ReferencedContainer = "container:CIS55Lab1_MatthewTso-4.xcodeproj">
+               BlueprintIdentifier = "7F412DEE1CB5FC2400CEC77E"
+               BuildableName = "CIS55Lab1_MatthewTso-1.app"
+               BlueprintName = "CIS55Lab1_MatthewTso-1"
+               ReferencedContainer = "container:CIS55Lab1_MatthewTso-1.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7F26E2631CB9D5D500CBBF88"
-            BuildableName = "CIS55Lab1_MatthewTso-4.app"
-            BlueprintName = "CIS55Lab1_MatthewTso-4"
-            ReferencedContainer = "container:CIS55Lab1_MatthewTso-4.xcodeproj">
+            BlueprintIdentifier = "7F412DEE1CB5FC2400CEC77E"
+            BuildableName = "CIS55Lab1_MatthewTso-1.app"
+            BlueprintName = "CIS55Lab1_MatthewTso-1"
+            ReferencedContainer = "container:CIS55Lab1_MatthewTso-1.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7F26E2631CB9D5D500CBBF88"
-            BuildableName = "CIS55Lab1_MatthewTso-4.app"
-            BlueprintName = "CIS55Lab1_MatthewTso-4"
-            ReferencedContainer = "container:CIS55Lab1_MatthewTso-4.xcodeproj">
+            BlueprintIdentifier = "7F412DEE1CB5FC2400CEC77E"
+            BuildableName = "CIS55Lab1_MatthewTso-1.app"
+            BlueprintName = "CIS55Lab1_MatthewTso-1"
+            ReferencedContainer = "container:CIS55Lab1_MatthewTso-1.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7F26E2631CB9D5D500CBBF88"
-            BuildableName = "CIS55Lab1_MatthewTso-4.app"
-            BlueprintName = "CIS55Lab1_MatthewTso-4"
-            ReferencedContainer = "container:CIS55Lab1_MatthewTso-4.xcodeproj">
+            BlueprintIdentifier = "7F412DEE1CB5FC2400CEC77E"
+            BuildableName = "CIS55Lab1_MatthewTso-1.app"
+            BlueprintName = "CIS55Lab1_MatthewTso-1"
+            ReferencedContainer = "container:CIS55Lab1_MatthewTso-1.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

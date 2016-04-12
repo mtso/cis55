@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -129,13 +130,13 @@
                                 <exclude reference="fxy-gz-hnQ"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="YuJ-AV-HbW"/>
-                                <exclude reference="fjd-wH-L5g"/>
+                                <exclude reference="BcE-zo-pTC"/>
                                 <exclude reference="sMs-r6-riG"/>
                                 <exclude reference="084-si-GEW"/>
                                 <exclude reference="iLt-f2-Gi8"/>
                                 <exclude reference="nyR-xW-Cy8"/>
-                                <exclude reference="BcE-zo-pTC"/>
+                                <exclude reference="YuJ-AV-HbW"/>
+                                <exclude reference="fjd-wH-L5g"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -145,13 +146,13 @@
                                 <include reference="fxy-gz-hnQ"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="YuJ-AV-HbW"/>
-                                <include reference="fjd-wH-L5g"/>
+                                <include reference="BcE-zo-pTC"/>
                                 <include reference="sMs-r6-riG"/>
                                 <include reference="084-si-GEW"/>
                                 <include reference="iLt-f2-Gi8"/>
                                 <include reference="nyR-xW-Cy8"/>
-                                <include reference="BcE-zo-pTC"/>
+                                <include reference="YuJ-AV-HbW"/>
+                                <include reference="fjd-wH-L5g"/>
                             </mask>
                         </variation>
                     </view>

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7F412DEE1CB5FC2400CEC77E"
+               BlueprintIdentifier = "7F26E2631CB9D5D500CBBF88"
                BuildableName = "CIS55Lab1_MatthewTso.app"
                BlueprintName = "CIS55Lab1_MatthewTso"
                ReferencedContainer = "container:CIS55Lab1_MatthewTso.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7F412DEE1CB5FC2400CEC77E"
+            BlueprintIdentifier = "7F26E2631CB9D5D500CBBF88"
             BuildableName = "CIS55Lab1_MatthewTso.app"
             BlueprintName = "CIS55Lab1_MatthewTso"
             ReferencedContainer = "container:CIS55Lab1_MatthewTso.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7F412DEE1CB5FC2400CEC77E"
+            BlueprintIdentifier = "7F26E2631CB9D5D500CBBF88"
             BuildableName = "CIS55Lab1_MatthewTso.app"
             BlueprintName = "CIS55Lab1_MatthewTso"
             ReferencedContainer = "container:CIS55Lab1_MatthewTso.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7F412DEE1CB5FC2400CEC77E"
+            BlueprintIdentifier = "7F26E2631CB9D5D500CBBF88"
             BuildableName = "CIS55Lab1_MatthewTso.app"
             BlueprintName = "CIS55Lab1_MatthewTso"
             ReferencedContainer = "container:CIS55Lab1_MatthewTso.xcodeproj">

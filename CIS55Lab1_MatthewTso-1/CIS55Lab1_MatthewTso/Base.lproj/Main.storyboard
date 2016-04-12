@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CIS55Lab1_MatthewTso" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxH-pq-igJ">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <color key="backgroundColor" red="0.74750578231596654" green="0.95625000000000004" blue="0.94035652756459531" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FT5-Go-lQk">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.16346732402022121" green="0.89170673076923079" blue="0.54744269720557936" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="agi-c1-VOj"/>
+                                    <constraint firstAttribute="width" constant="360" id="lKs-Su-YzI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <state key="normal" title="Retweet After Me">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="disabled" title="Enter a message to retweet"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="agi-c1-VOj"/>
+                                        <exclude reference="lKs-Su-YzI"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="agi-c1-VOj"/>
+                                        <include reference="lKs-Su-YzI"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="btnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L42-GR-gki"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="140 Character Tweet" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gY9-Zf-fbP">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="BUM-YW-YAV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="keyPath">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="BUM-YW-YAV"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="BUM-YW-YAV"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="FT5-Go-lQk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NUH-hP-oD7"/>
+                            <constraint firstItem="FT5-Go-lQk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="72" id="PfW-Vc-1Sk"/>
+                            <constraint firstItem="gY9-Zf-fbP" firstAttribute="top" secondItem="gxH-pq-igJ" secondAttribute="bottom" constant="18" id="QPn-V7-UnM"/>
+                            <constraint firstItem="gY9-Zf-fbP" firstAttribute="trailing" secondItem="FT5-Go-lQk" secondAttribute="trailing" id="RWl-sU-skG"/>
+                            <constraint firstItem="FT5-Go-lQk" firstAttribute="top" secondItem="gY9-Zf-fbP" secondAttribute="bottom" constant="17" id="Rt5-FU-6F5"/>
+                            <constraint firstItem="gY9-Zf-fbP" firstAttribute="leading" secondItem="FT5-Go-lQk" secondAttribute="leading" id="Rzr-94-OXM"/>
+                            <constraint firstItem="gY9-Zf-fbP" firstAttribute="trailing" secondItem="gxH-pq-igJ" secondAttribute="trailing" id="Vt4-k5-Hth"/>
+                            <constraint firstItem="gY9-Zf-fbP" firstAttribute="leading" secondItem="gxH-pq-igJ" secondAttribute="leading" id="ayX-F4-cel"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="gxH-pq-igJ"/>
+                                <exclude reference="FT5-Go-lQk"/>
+                                <exclude reference="gY9-Zf-fbP"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="QPn-V7-UnM"/>
+                                <exclude reference="RWl-sU-skG"/>
+                                <exclude reference="Rzr-94-OXM"/>
+                                <exclude reference="Vt4-k5-Hth"/>
+                                <exclude reference="ayX-F4-cel"/>
+                                <exclude reference="NUH-hP-oD7"/>
+                                <exclude reference="PfW-Vc-1Sk"/>
+                                <exclude reference="Rt5-FU-6F5"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="gxH-pq-igJ"/>
+                                <include reference="FT5-Go-lQk"/>
+                                <include reference="gY9-Zf-fbP"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="QPn-V7-UnM"/>
+                                <include reference="RWl-sU-skG"/>
+                                <include reference="Rzr-94-OXM"/>
+                                <include reference="Vt4-k5-Hth"/>
+                                <include reference="ayX-F4-cel"/>
+                                <include reference="NUH-hP-oD7"/>
+                                <include reference="PfW-Vc-1Sk"/>
+                                <include reference="Rt5-FU-6F5"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="btnText" destination="FT5-Go-lQk" id="ltY-fd-aak"/>
+                        <outlet property="labelText" destination="gxH-pq-igJ" id="4Oe-z7-jtK"/>
+                        <outlet property="txtField" destination="gY9-Zf-fbP" id="Lbe-IV-rse"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="343.5" y="404"/>
+        </scene>
+    </scenes>
+</document>
