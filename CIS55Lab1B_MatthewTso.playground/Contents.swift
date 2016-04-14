@@ -1,6 +1,6 @@
-// CIS55
-// Lab1B: Pay Calculator
-// Matthew Tso
+// CIS 55
+// Lab 1B: Pay Calculator
+// Name: Matthew Tso
 
 import UIKit
 
