@@ -4,10 +4,11 @@
 
 import UIKit
 
-let numberOfDays = 30 // Number of days in a month.
-
-var dailyPay = [0.01], totalPay = [0.01]
-var formattedDailyPay : [String] = [], formattedTotalPay : [String] = []
+let numberOfDays = 30
+var dailyPay = [142.01],
+    totalPay = [0.01]
+var formattedDailyPay : [String] = [],
+    formattedTotalPay : [String] = []
 
 // Add daily pay and total pay values to arrays.
 for day in 0..<numberOfDays {
@@ -23,7 +24,7 @@ for day in 0..<numberOfDays {
     formattedTotalPay.append(format.stringFromNumber(totalPay[day])!)
 }
 
-// Add tabbing periods to left-align strings.
+// Left-align strings by adding periods.
 let totalMaxCharCount = formattedTotalPay[numberOfDays-1].characters.count
 for day in 0..<numberOfDays {
     let dailyTabbing = totalMaxCharCount - formattedDailyPay[day].characters.count
