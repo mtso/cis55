@@ -96,7 +96,7 @@
 				TargetAttributes = {
 					7F26E2631CB9D5D500CBBF88 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = RZ2DT6A2TM;
+						DevelopmentTeam = 2NKLZJVG9L;
 					};
 				};
 			};
@@ -247,6 +247,7 @@
 		7F26E2771CB9D5D500CBBF88 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CIS55Lab1_MatthewTso/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.deanza.mtso.CIS55Lab1-MatthewTso";
@@ -257,6 +258,7 @@
 		7F26E2781CB9D5D500CBBF88 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CIS55Lab1_MatthewTso/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.deanza.mtso.CIS55Lab1-MatthewTso";
