@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Form View Controller-->
+        <scene sceneID="PbL-xM-5eK">
+            <objects>
+                <viewController id="hzH-wq-wbQ" customClass="FormViewController" customModule="CISLab1C_MatthewTso_sketch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mzi-CV-yJE"/>
+                        <viewControllerLayoutGuide type="bottom" id="gMu-8o-C0f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1cW-x6-BX5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vaY-Ww-WiF">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.1176470588" green="0.75294117650000003" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="Calculate">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="306" width="400" height="60"/>
+                                </variation>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RdX-wc-6lP">
+                                <rect key="frame" x="67" y="44" width="195" height="245"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Starting Pay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SV5-bE-j95">
+                                        <rect key="frame" x="51" y="20" width="93" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.1176470588" green="0.75294117650000003" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact" ambiguous="YES">
+                                            <rect key="frame" x="31" y="0.0" width="93" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$0.00" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7se-un-m2e">
+                                        <rect key="frame" x="20" y="41" width="155" height="82"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="60"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                <color key="value" red="0.1176470588" green="0.75294117650000003" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="widthClass=compact" ambiguous="YES">
+                                            <rect key="frame" x="0.0" y="21" width="155" height="82"/>
+                                        </variation>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Number of Days" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2Z-em-Hef">
+                                        <rect key="frame" x="36" y="123" width="124" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.1176470588" green="0.75294117650000003" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact" ambiguous="YES">
+                                            <rect key="frame" x="16" y="103" width="124" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yWQ-FO-o67">
+                                        <rect key="frame" x="79" y="143" width="38" height="82"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="60"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                <color key="value" red="0.1176470588" green="0.75294117650000003" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="widthClass=compact" ambiguous="YES">
+                                            <rect key="frame" x="59" y="123" width="38" height="82"/>
+                                        </variation>
+                                    </textField>
+                                </subviews>
+                                <variation key="widthClass=compact" alignment="center" axis="vertical" fixedFrame="YES">
+                                    <rect key="frame" x="123" y="46" width="155" height="205"/>
+                                </variation>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="vaY-Ww-WiF"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="vaY-Ww-WiF"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SLr-JW-LGX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="152" y="283"/>
+        </scene>
+    </scenes>
+</document>
