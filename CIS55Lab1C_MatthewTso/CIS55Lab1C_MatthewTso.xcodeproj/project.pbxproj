@@ -7,17 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F4A53191CC9EC2600643E2F /* PushAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A53181CC9EC2600643E2F /* PushAnimatedTransitioning.swift */; };
+		7F809CA91CCC431700DCF800 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F809CA81CCC431700DCF800 /* FormViewController.swift */; };
+		7F809CAB1CCC494E00DCF800 /* DisplayViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F809CAA1CCC494E00DCF800 /* DisplayViewControllerExtensions.swift */; };
+		7F809CAF1CCC4D0A00DCF800 /* PayDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F809CAE1CCC4D0A00DCF800 /* PayDataModel.swift */; };
+		7F809CB11CCC611E00DCF800 /* DisplayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F809CB01CCC611E00DCF800 /* DisplayTableViewCell.swift */; };
 		7FB6880C1CC8723F00C82CC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB6880B1CC8723F00C82CC1 /* AppDelegate.swift */; };
-		7FB6880E1CC8723F00C82CC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB6880D1CC8723F00C82CC1 /* ViewController.swift */; };
+		7FB6880E1CC8723F00C82CC1 /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB6880D1CC8723F00C82CC1 /* DisplayViewController.swift */; };
 		7FB688111CC8723F00C82CC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB6880F1CC8723F00C82CC1 /* Main.storyboard */; };
 		7FB688131CC8723F00C82CC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FB688121CC8723F00C82CC1 /* Assets.xcassets */; };
 		7FB688161CC8723F00C82CC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB688141CC8723F00C82CC1 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F4A53181CC9EC2600643E2F /* PushAnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushAnimatedTransitioning.swift; sourceTree = "<group>"; };
+		7F809CA81CCC431700DCF800 /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		7F809CAA1CCC494E00DCF800 /* DisplayViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayViewControllerExtensions.swift; sourceTree = "<group>"; };
+		7F809CAE1CCC4D0A00DCF800 /* PayDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayDataModel.swift; sourceTree = "<group>"; };
+		7F809CB01CCC611E00DCF800 /* DisplayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayTableViewCell.swift; sourceTree = "<group>"; };
 		7FB688081CC8723F00C82CC1 /* CIS55Lab1C_MatthewTso.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CIS55Lab1C_MatthewTso.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB6880B1CC8723F00C82CC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7FB6880D1CC8723F00C82CC1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7FB6880D1CC8723F00C82CC1 /* DisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
 		7FB688101CC8723F00C82CC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7FB688121CC8723F00C82CC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FB688151CC8723F00C82CC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,8 +65,13 @@
 			isa = PBXGroup;
 			children = (
 				7FB6880B1CC8723F00C82CC1 /* AppDelegate.swift */,
-				7FB6880D1CC8723F00C82CC1 /* ViewController.swift */,
 				7FB6880F1CC8723F00C82CC1 /* Main.storyboard */,
+				7FB6880D1CC8723F00C82CC1 /* DisplayViewController.swift */,
+				7F809CAA1CCC494E00DCF800 /* DisplayViewControllerExtensions.swift */,
+				7F809CA81CCC431700DCF800 /* FormViewController.swift */,
+				7F809CB01CCC611E00DCF800 /* DisplayTableViewCell.swift */,
+				7F809CAE1CCC4D0A00DCF800 /* PayDataModel.swift */,
+				7F4A53181CC9EC2600643E2F /* PushAnimatedTransitioning.swift */,
 				7FB688121CC8723F00C82CC1 /* Assets.xcassets */,
 				7FB688141CC8723F00C82CC1 /* LaunchScreen.storyboard */,
 				7FB688171CC8723F00C82CC1 /* Info.plist */,
@@ -136,8 +151,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FB6880E1CC8723F00C82CC1 /* ViewController.swift in Sources */,
+				7FB6880E1CC8723F00C82CC1 /* DisplayViewController.swift in Sources */,
+				7F809CAF1CCC4D0A00DCF800 /* PayDataModel.swift in Sources */,
 				7FB6880C1CC8723F00C82CC1 /* AppDelegate.swift in Sources */,
+				7F809CA91CCC431700DCF800 /* FormViewController.swift in Sources */,
+				7F809CAB1CCC494E00DCF800 /* DisplayViewControllerExtensions.swift in Sources */,
+				7F809CB11CCC611E00DCF800 /* DisplayTableViewCell.swift in Sources */,
+				7F4A53191CC9EC2600643E2F /* PushAnimatedTransitioning.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +311,7 @@
 				7FB6881C1CC8723F00C82CC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
