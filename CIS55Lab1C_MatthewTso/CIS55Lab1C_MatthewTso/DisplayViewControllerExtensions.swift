@@ -48,7 +48,19 @@ extension DisplayViewController: UITableViewDataSource, UITableViewDelegate {
             string: "Day " + String(dataArray[indexPath.row].day),
             attributes: [ NSFontAttributeName: UIFont.systemFontOfSize(17.0, weight: UIFontWeightThin)])
         
-        cell.totalLabel?.attributedText = formatCurrencyStringFromDouble((dataArray[indexPath.row].total), pointSize: 17.0)
+        let totalString = NSMutableAttributedString(
+            string: "Total: ",
+            attributes: [ NSFontAttributeName: UIFont.systemFontOfSize(17.0, weight: UIFontWeightThin),
+            ])
+        totalString.appendAttributedString(formatCurrencyStringFromDouble((dataArray[indexPath.row].total), pointSize: 17.0))
+
+//        let totalRange = NSRange(location: 0, length: totalString.length)
+//        totalString.setAttributes([NSForegroundColorAttributeName: UIColor.grayColor()], range: totalRange)
+        
+        
+        cell.totalLabel?.attributedText = totalString
+        cell.totalLabel.alpha = 0.5
+        
         cell.payLabel?.attributedText = formatCurrencyStringFromDouble((dataArray[indexPath.row].pay), pointSize: 40.0)
         
         return cell
@@ -56,7 +68,7 @@ extension DisplayViewController: UITableViewDataSource, UITableViewDelegate {
     
     func generateDataArray() {
         
-        startingPay = Double(form!.startingPayField.text!)!
+//        startingPay = Double(form!.startingPayField.text!)!
         numberOfDays = Int(form!.numberOfDaysField.text!)!
         
         print(startingPay)
@@ -76,6 +88,8 @@ extension DisplayViewController: UITableViewDataSource, UITableViewDelegate {
             
         }
         displayTable.reloadData()
+        displayTable.setContentOffset(CGPointZero, animated:true)
+        
         setupToolbar()
     }
 
@@ -86,43 +100,60 @@ var newToolbar = true
 extension DisplayViewController {
     
     func setupToolbar() {
+        
+//        let originalFrame = infoToolbar.frame
+//        let tallerFrame = CGRectMake(originalFrame.origin.x, originalFrame.origin.y, originalFrame.width, originalFrame.height + 40.0)
+//        infoToolbar.frame = tallerFrame
+//        
+        let titleSize : CGFloat = 17
+        let valueSize : CGFloat = 13
+        
         var toolbarItems = infoToolbar.items
         
-        let startingPayToolbarView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 40))
+        let startingPayToolbarView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
         startingPayToolbarView.backgroundColor = UIColor.clearColor()
+        startingPayToolbarView.clipsToBounds = false
         
-        let startingPayTitleToolbarLabel = UILabel(frame: CGRect(x: 0, y: 4, width: 100, height: 20))
-        startingPayTitleToolbarLabel.font = UIFont.systemFontOfSize(12) //UIFont(name: "Avenir", size: 12)
+        let startingPayTitleToolbarLabel = UILabel(frame: CGRect(x: 0, y: -4, width: 100, height: 30))
+        startingPayTitleToolbarLabel.font = UIFont.systemFontOfSize(titleSize) //UIFont(name: "Avenir", size: 12)
         startingPayTitleToolbarLabel.backgroundColor = UIColor.clearColor()
         startingPayTitleToolbarLabel.textColor = UIColor.blackColor()
         startingPayTitleToolbarLabel.text = "Starting Pay"
         startingPayTitleToolbarLabel.textAlignment = NSTextAlignment.Center
         
         let startingPayValueToolbarLabel = UILabel(frame: CGRect(x: 0, y: 20, width: 100, height: 20))
-        startingPayValueToolbarLabel.font = UIFont.systemFontOfSize(10) //UIFont(name: "Avenir", size: 10)
+        startingPayValueToolbarLabel.font = UIFont.systemFontOfSize(valueSize) //UIFont(name: "Avenir", size: 10)
         startingPayValueToolbarLabel.backgroundColor = UIColor.clearColor()
-        startingPayValueToolbarLabel.textColor = UIColor.grayColor()
-        startingPayValueToolbarLabel.text = String(startingPay)
+//        startingPayValueToolbarLabel.textColor = UIColor.grayColor()
+        startingPayValueToolbarLabel.alpha = 0.5
+        
+        let currencyFormatter = NSNumberFormatter()
+        currencyFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
+        let formattedStartingPay = currencyFormatter.stringFromNumber(startingPay)
+        
+        startingPayValueToolbarLabel.text = formattedStartingPay//"$" + String(startingPay)
         startingPayValueToolbarLabel.textAlignment = NSTextAlignment.Center
         
         startingPayToolbarView.addSubview(startingPayTitleToolbarLabel)
         startingPayToolbarView.addSubview(startingPayValueToolbarLabel)
         
         
-        let dayNumberToolbarView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 40))
+        let dayNumberToolbarView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
         dayNumberToolbarView.backgroundColor = UIColor.clearColor()
+        dayNumberToolbarView.clipsToBounds = false
 
-        let dayNumberTitleToolbarLabel = UILabel(frame: CGRect(x: 0, y: 4, width: 100, height: 20))
-        dayNumberTitleToolbarLabel.font = UIFont.systemFontOfSize(12) //UIFont(name: "Avenir", size: 12)
+        let dayNumberTitleToolbarLabel = UILabel(frame: CGRect(x: 0, y: -4, width: 100, height: 30))
+        dayNumberTitleToolbarLabel.font = UIFont.systemFontOfSize(titleSize) //UIFont(name: "Avenir", size: 12)
         dayNumberTitleToolbarLabel.backgroundColor = UIColor.clearColor()
         dayNumberTitleToolbarLabel.textColor = UIColor.blackColor()
-        dayNumberTitleToolbarLabel.text = "Number of Days"
+        dayNumberTitleToolbarLabel.text = "Days"
         dayNumberTitleToolbarLabel.textAlignment = NSTextAlignment.Left
         
         let dayNumberValueToolbarLabel = UILabel(frame: CGRect(x: 0, y: 20, width: 100, height: 20))
-        dayNumberValueToolbarLabel.font = UIFont.systemFontOfSize(10) //UIFont(name: "Avenir", size: 10)
+        dayNumberValueToolbarLabel.font = UIFont.systemFontOfSize(valueSize) //UIFont(name: "Avenir", size: 10)
         dayNumberValueToolbarLabel.backgroundColor = UIColor.clearColor()
-        dayNumberValueToolbarLabel.textColor = UIColor.grayColor()
+//        dayNumberValueToolbarLabel.textColor = UIColor.grayColor()
+        dayNumberValueToolbarLabel.alpha = 0.5
         dayNumberValueToolbarLabel.text = String(numberOfDays)
         dayNumberValueToolbarLabel.textAlignment = NSTextAlignment.Left
         
@@ -183,12 +214,12 @@ extension DisplayViewController {
             typealias Suffix = (threshold: Double, divisor: Double, abbreviation: String)
             
             var suffixList : [Suffix] =
-            [(0.0, 1.0, ""),
+                [(0.0, 1.0, ""),
                 (1000.0, 1000.0, "K"),
-                (100_000.0, 1_000_000.0, "M"),
-                (100_000_000.0, 1_000_000_000.0, "B"),
-                (100_000_000_000.0, 1_000_000_000_000.0, "T"),
-                (100_000_000_000_000.0, 1_000_000_000_000_000.0, "Q")]
+                (1000_000.0, 1_000_000.0, "M"),
+                (1000_000_000.0, 1_000_000_000.0, "B"),
+                (1000_000_000_000.0, 1_000_000_000_000.0, "T"),
+                (1000_000_000_000_000.0, 1_000_000_000_000_000.0, "Q")]
             
             var correctSuffix:Suffix = suffixList[0]
             for testSuffix in suffixList {
@@ -206,16 +237,35 @@ extension DisplayViewController {
             numFormatter.minimumIntegerDigits = 1
             numFormatter.minimumFractionDigits = 1
             numFormatter.maximumFractionDigits = 1
+            numFormatter.minimumSignificantDigits = 3
+            numFormatter.maximumSignificantDigits = 3
             
             if double < 1000.0 {
                 numFormatter.minimumFractionDigits = 2
-                numFormatter.minimumSignificantDigits = 1
+                numFormatter.minimumSignificantDigits = 5
+                numFormatter.maximumSignificantDigits = 5
+            }
+            if double < 100.0 {
+                numFormatter.minimumSignificantDigits = 4
+                numFormatter.maximumSignificantDigits = 4
+            }
+            if double < 10.0 {
+                numFormatter.maximumSignificantDigits = 3
+            }
+            if double < 1.0 {
+                numFormatter.maximumSignificantDigits = 2
+            }
+            if double < 0.1 {
+                numFormatter.maximumSignificantDigits = 1
             }
             
             let formattedNumberWithSuffix = numFormatter.stringFromNumber(value)
+//            formattedNumberWithSuffix = formattedNumberWithSuffix?.stringByReplacingOccurrencesOfString("$", withString: "")
+            
             let attributedNumberWithSuffix = NSMutableAttributedString(string: formattedNumberWithSuffix!, attributes: [
                 NSFontAttributeName: UIFont.systemFontOfSize(pointSize, weight: fontWeight),
                 ])
+            
             attributedResult.appendAttributedString(attributedNumberWithSuffix)
         } else {
             let snFormat = NSNumberFormatter()
@@ -243,3 +293,4 @@ extension DisplayViewController {
         return attributedResult
     }
 }
+

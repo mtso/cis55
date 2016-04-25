@@ -39,7 +39,12 @@ class DisplayViewController: UIViewController {
         form = storyboard!.instantiateViewControllerWithIdentifier("FormViewController") as? FormViewController
         form!.transitioningDelegate = self
 //        presentViewController(form!, animated: true, completion: nil)
-
+        
+        
+        let screenSize = UIScreen.mainScreen().bounds.width
+        print(screenSize)
+//        let screenWidth 
+        
     }
     override func viewDidAppear(animated: Bool) {
         if appInitialize{
