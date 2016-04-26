@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F4A53191CC9EC2600643E2F /* PushAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A53181CC9EC2600643E2F /* PushAnimatedTransitioning.swift */; };
+		7F4A53191CC9EC2600643E2F /* SlideAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A53181CC9EC2600643E2F /* SlideAnimatedTransitioning.swift */; };
 		7F809CA91CCC431700DCF800 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F809CA81CCC431700DCF800 /* FormViewController.swift */; };
 		7F809CAB1CCC494E00DCF800 /* DisplayViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F809CAA1CCC494E00DCF800 /* DisplayViewControllerExtensions.swift */; };
 		7F809CAF1CCC4D0A00DCF800 /* PayDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F809CAE1CCC4D0A00DCF800 /* PayDataModel.swift */; };
@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7F4A53181CC9EC2600643E2F /* PushAnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushAnimatedTransitioning.swift; sourceTree = "<group>"; };
+		7F4A53181CC9EC2600643E2F /* SlideAnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideAnimatedTransitioning.swift; sourceTree = "<group>"; };
 		7F809CA81CCC431700DCF800 /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		7F809CAA1CCC494E00DCF800 /* DisplayViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayViewControllerExtensions.swift; sourceTree = "<group>"; };
 		7F809CAE1CCC4D0A00DCF800 /* PayDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayDataModel.swift; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 				7F9FB5A91CCDA65100FF14B0 /* FormViewControllerExtensions.swift */,
 				7F809CB01CCC611E00DCF800 /* DisplayTableViewCell.swift */,
 				7F809CAE1CCC4D0A00DCF800 /* PayDataModel.swift */,
-				7F4A53181CC9EC2600643E2F /* PushAnimatedTransitioning.swift */,
+				7F4A53181CC9EC2600643E2F /* SlideAnimatedTransitioning.swift */,
 				7FB688121CC8723F00C82CC1 /* Assets.xcassets */,
 				7FB688141CC8723F00C82CC1 /* LaunchScreen.storyboard */,
 				7FB688171CC8723F00C82CC1 /* Info.plist */,
@@ -161,7 +161,7 @@
 				7F809CA91CCC431700DCF800 /* FormViewController.swift in Sources */,
 				7F809CAB1CCC494E00DCF800 /* DisplayViewControllerExtensions.swift in Sources */,
 				7F809CB11CCC611E00DCF800 /* DisplayTableViewCell.swift in Sources */,
-				7F4A53191CC9EC2600643E2F /* PushAnimatedTransitioning.swift in Sources */,
+				7F4A53191CC9EC2600643E2F /* SlideAnimatedTransitioning.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +275,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CIS55Lab1C_MatthewTso/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.deanza.mtso.CIS55Lab1C-MatthewTso";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -289,6 +290,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CIS55Lab1C_MatthewTso/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.deanza.mtso.CIS55Lab1C-MatthewTso";
 				PRODUCT_NAME = "$(TARGET_NAME)";

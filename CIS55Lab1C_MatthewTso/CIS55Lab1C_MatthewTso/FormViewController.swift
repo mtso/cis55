@@ -25,8 +25,14 @@ class FormViewController: UIViewController {
     var appInitialize = true
     
     override func viewDidLoad() {
+
         startingPayField.delegate = self
         numberOfDaysField.delegate = self
+        
+        
+//        startingPayField.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
+
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: "textFieldDidChange:", name:UITextFieldTextDidChangeNotification, object: startingPayField)
         
 //        startingPayField.adjustsFontSizeToFitWidth = false
         
@@ -107,6 +113,10 @@ class FormViewController: UIViewController {
             presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
         }
         
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
     
     @IBAction func cancelButtonClick(sender: AnyObject) {

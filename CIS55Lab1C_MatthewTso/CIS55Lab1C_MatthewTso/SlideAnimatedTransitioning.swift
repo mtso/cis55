@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PushAnimatedTransitioning: NSObject, UIViewControllerAnimatedTransitioning {
+class SlideAnimatedTransitioning: NSObject, UIViewControllerAnimatedTransitioning {
     
     let duration = 0.6
     var presenting = true
