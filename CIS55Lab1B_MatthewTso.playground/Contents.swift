@@ -5,8 +5,8 @@
 import UIKit
 
 let numberOfDays = 30
-var dailyPay = [142.01],
-    totalPay = [0.01]
+var dailyPay = [141080789682122.01],
+    totalPay = dailyPay
 var formattedDailyPay : [String] = [],
     formattedTotalPay : [String] = []
 
@@ -17,7 +17,7 @@ for day in 0..<numberOfDays {
 }
 
 // Use array values to create strings in currency format.
-var format = NSNumberFormatter()
+let format = NSNumberFormatter()
 format.numberStyle = NSNumberFormatterStyle.CurrencyStyle
 for day in 0..<numberOfDays {
     formattedDailyPay.append(format.stringFromNumber(dailyPay[day])!)

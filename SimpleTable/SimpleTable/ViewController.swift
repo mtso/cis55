@@ -45,7 +45,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.textLabel?.text = name
         
         if (UIImage(named: imageName) != nil){
-            
+            cell.imageView?.image = UIImage(named: imageName)
         } else {
             cell.imageView?.image = UIImage(named: "restaurant")
         }

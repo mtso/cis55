@@ -12,6 +12,8 @@
 		7F1753A01CC94D2B006A2B19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F17539E1CC94D2B006A2B19 /* Main.storyboard */; };
 		7F1753A21CC94D2B006A2B19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F1753A11CC94D2B006A2B19 /* Assets.xcassets */; };
 		7F1753A51CC94D2B006A2B19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F1753A31CC94D2B006A2B19 /* LaunchScreen.storyboard */; };
+		7F4A533D1CCA324C00643E2F /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A533C1CCA324C00643E2F /* ModalViewController.swift */; };
+		7F4A533F1CCA32B900643E2F /* WipeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A533E1CCA32B900643E2F /* WipeAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		7F1753A11CC94D2B006A2B19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F1753A41CC94D2B006A2B19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F1753A61CC94D2B006A2B19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F4A533C1CCA324C00643E2F /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		7F4A533E1CCA32B900643E2F /* WipeAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WipeAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				7F17539A1CC94D2B006A2B19 /* AppDelegate.swift */,
 				7F17539C1CC94D2B006A2B19 /* ViewController.swift */,
+				7F4A533C1CCA324C00643E2F /* ModalViewController.swift */,
+				7F4A533E1CCA32B900643E2F /* WipeAnimator.swift */,
 				7F17539E1CC94D2B006A2B19 /* Main.storyboard */,
 				7F1753A11CC94D2B006A2B19 /* Assets.xcassets */,
 				7F1753A31CC94D2B006A2B19 /* LaunchScreen.storyboard */,
@@ -136,6 +142,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F17539D1CC94D2B006A2B19 /* ViewController.swift in Sources */,
+				7F4A533F1CCA32B900643E2F /* WipeAnimator.swift in Sources */,
+				7F4A533D1CCA324C00643E2F /* ModalViewController.swift in Sources */,
 				7F17539B1CC94D2B006A2B19 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +292,7 @@
 				7F1753AB1CC94D2B006A2B19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

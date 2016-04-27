@@ -16,11 +16,65 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doQ-YL-vHb">
+                                <rect key="frame" x="200" y="260" width="200" height="80"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="7Ku-LC-S0m"/>
+                                    <constraint firstAttribute="width" constant="200" id="c6J-7U-wcq"/>
+                                </constraints>
+                                <state key="normal" title="show it"/>
+                                <connections>
+                                    <action selector="showButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="krq-jT-HKY"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="doQ-YL-vHb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dU7-ip-Jhs"/>
+                            <constraint firstItem="doQ-YL-vHb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="g0c-QU-ynz"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Modal View Controller-->
+        <scene sceneID="gZk-HQ-pAg">
+            <objects>
+                <viewController storyboardIdentifier="ModalViewController" id="Bpt-g0-qHQ" customClass="ModalViewController" customModule="MultipleViewTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RBn-kJ-ZMc"/>
+                        <viewControllerLayoutGuide type="bottom" id="b0O-vu-LTU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="75Y-bW-vFy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zy8-RQ-gfh">
+                                <rect key="frame" x="200" y="260" width="200" height="80"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="cV2-e5-lnB"/>
+                                    <constraint firstAttribute="height" constant="80" id="lLI-yA-Dh5"/>
+                                </constraints>
+                                <state key="normal" title="hide me"/>
+                                <connections>
+                                    <action selector="hideButtonClick:" destination="Bpt-g0-qHQ" eventType="touchUpInside" id="Ebn-S3-7bG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zy8-RQ-gfh" firstAttribute="centerX" secondItem="75Y-bW-vFy" secondAttribute="centerX" id="pq0-66-eYW"/>
+                            <constraint firstItem="Zy8-RQ-gfh" firstAttribute="centerY" secondItem="75Y-bW-vFy" secondAttribute="centerY" id="sPz-oK-rTe"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6K9-mx-nqn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1073" y="384"/>
         </scene>
     </scenes>
 </document>

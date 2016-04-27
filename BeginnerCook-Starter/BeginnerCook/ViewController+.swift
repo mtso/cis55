@@ -84,3 +84,18 @@ extension ViewController: UIScrollViewDelegate {
     }
     
 }
+
+extension ViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.originFrame = (selectedImage?.superview?.convertRect(selectedImage!.frame, toView: nil))!
+        transition.presenting = true
+        return transition
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.presenting = false
+        return transition
+    }
+    
+}
