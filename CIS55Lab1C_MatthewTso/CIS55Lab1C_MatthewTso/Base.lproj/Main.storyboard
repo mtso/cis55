@@ -20,7 +20,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QRC-Q7-SRR">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.98823529409999999" green="0.98039215690000003" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.98431372549999996" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DisplayCell" rowHeight="90" id="bDF-kK-Z59" customClass="DisplayTableViewCell" customModule="CIS55Lab1C_MatthewTso" customModuleProvider="target">
@@ -33,7 +33,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hcj-5i-3wr">
                                                     <rect key="frame" x="0.0" y="1" width="404" height="97"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="8nE-c4-bJ2">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="8nE-c4-bJ2">
                                                             <rect key="frame" x="0.0" y="14" width="71" height="21"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="je3-49-FDO">
@@ -41,18 +41,12 @@
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" red="0.14901960784313725" green="0.10980392156862745" blue="0.015686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
-                                                                    <variation key="widthClass=compact" misplaced="YES">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="143" height="21"/>
-                                                                    </variation>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyP-wF-SNe">
                                                                     <rect key="frame" x="34" y="0.0" width="38" height="21"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" red="0.14901960784313725" green="0.10980392156862745" blue="0.015686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
-                                                                    <variation key="widthClass=compact" misplaced="YES">
-                                                                        <rect key="frame" x="0.0" y="25" width="143" height="21"/>
-                                                                    </variation>
                                                                 </label>
                                                             </subviews>
                                                             <constraints>
@@ -65,8 +59,7 @@
                                                                     <exclude reference="vkA-jq-8xK"/>
                                                                 </mask>
                                                             </variation>
-                                                            <variation key="widthClass=compact" axis="vertical" misplaced="YES">
-                                                                <rect key="frame" x="0.0" y="23" width="143" height="45"/>
+                                                            <variation key="widthClass=compact" axis="vertical">
                                                                 <mask key="constraints">
                                                                     <exclude reference="vkA-jq-8xK"/>
                                                                 </mask>
@@ -85,17 +78,13 @@
                                                                     <exclude reference="c0V-9i-Xbc"/>
                                                                 </mask>
                                                             </variation>
-                                                            <variation key="widthClass=compact" misplaced="YES">
-                                                                <rect key="frame" x="143" y="21" width="228" height="48"/>
+                                                            <variation key="widthClass=compact">
                                                                 <mask key="constraints">
                                                                     <exclude reference="c0V-9i-Xbc"/>
                                                                 </mask>
                                                             </variation>
                                                         </label>
                                                     </subviews>
-                                                    <variation key="widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="15" y="-1" width="370" height="90"/>
-                                                    </variation>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
@@ -131,7 +120,7 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.98823529409999999" green="0.98039215690000003" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.99607843139999996" green="0.98431372549999996" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="hcj-5i-3wr" firstAttribute="leading" secondItem="bDF-kK-Z59" secondAttribute="leading" constant="130" id="6Pb-Kt-NNG">
                                                 <variation key="widthClass=compact" constant="15"/>
@@ -162,6 +151,7 @@
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eRD-cK-WnJ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.98431372549999996" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="04N-st-rha"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="g2w-Hb-cwU"/>
@@ -172,11 +162,11 @@
                                         </connections>
                                     </barButtonItem>
                                 </items>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="barTintColor" red="0.98823529409999999" green="0.98039215690000003" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.99607843139999996" green="0.98431372549999996" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.99607843139999996" green="0.98431372549999996" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                         </subviews>
-                        <color key="backgroundColor" red="0.98823529409999999" green="0.98039215690000003" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.98431372549999996" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QRC-Q7-SRR" secondAttribute="bottom" id="1YT-2a-mJl"/>
                             <constraint firstItem="QRC-Q7-SRR" firstAttribute="top" secondItem="eRD-cK-WnJ" secondAttribute="bottom" id="8iQ-ih-R6d"/>
@@ -477,7 +467,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.9882352941176471" green="0.98039215686274506" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.99607843137254903" green="0.98431372549019602" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="LZP-6O-zEn" firstAttribute="top" secondItem="cuc-Jw-WRG" secondAttribute="bottom" constant="21" id="1kg-3O-2A3">
                                 <variation key="widthClass=compact" constant="0.0"/>

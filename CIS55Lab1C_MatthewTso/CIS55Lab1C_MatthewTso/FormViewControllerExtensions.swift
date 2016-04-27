@@ -9,18 +9,7 @@
 import UIKit
 
 extension FormViewController: UITextFieldDelegate {
-    func keyboardWillChange(notification: NSNotification) {
-        // Get the start and end frame of the keyboard animation in CGRect.
-        let keyboardSizeBegin = (notification.userInfo![UIKeyboardFrameBeginUserInfoKey] as! NSValue).CGRectValue()
-        let keyboardSizeEnd = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
-        
-        // Calculate height change in keyboard position.
-        let deltaHeight = keyboardSizeBegin.origin.y - keyboardSizeEnd.origin.y
-        
-        // Add height change to button constraint.
-        self.calculateButtonToViewBottom.constant += deltaHeight
-    }
-    
+
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         
         if textField == startingPayField {
@@ -39,6 +28,7 @@ extension FormViewController: UITextFieldDelegate {
                 currentCharacterCount + string.characters.count - range.length - 1 :
                 currentCharacterCount + string.characters.count - range.length
             if (newLength > 6) {
+                // Shake the text field to alert the user.
                 shakeTextField(startingPayField)
                 return false
             }
@@ -59,6 +49,7 @@ extension FormViewController: UITextFieldDelegate {
                     
                     let newDigits = currentDigitsAfterDecimal + string.characters.count - range.length
                     if (newDigits > 2) {
+                        // Shake the text field to alert the user.
                         shakeTextField(startingPayField)
                         return false
                     } else {
@@ -109,10 +100,13 @@ extension FormViewController: UITextFieldDelegate {
             }
         }
         
+        // Return true if all conditions are satisfied.
+        // But with only two text fields, this should never be reached.
         return true
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
+        // Clear the text field automagically when the user starts editing.
         textField.text = ""
     }
 }

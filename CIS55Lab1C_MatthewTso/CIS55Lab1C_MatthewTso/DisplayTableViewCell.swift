@@ -5,11 +5,13 @@
 //  Created by Matthew Tso on 4/23/16.
 //  Copyright © 2016 DeAnza. All rights reserved.
 //
+//  This custom table view cell allows the UILabels to be attached.
+//
 
 import UIKit
 
 class DisplayTableViewCell: UITableViewCell {
-
+    
     @IBOutlet var dayLabel: UILabel!
     @IBOutlet var payLabel: UILabel!
     @IBOutlet var totalLabel: UILabel!
