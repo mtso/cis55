@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>PocketSVGFramework.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>7F64AEC01CD12B210046F95A</key>
+		<key>7F98D44D1CD1549000A1AEF2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7F98D4671CD154FA00A1AEF2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

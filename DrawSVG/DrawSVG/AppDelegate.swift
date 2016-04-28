@@ -3,7 +3,7 @@
 //  DrawSVG
 //
 //  Created by Matthew Tso on 4/27/16.
-//  Copyright © 2016 DeAnza. All rights reserved.
+//  Copyright © 2016 De Anza. All rights reserved.
 //
 
 import UIKit

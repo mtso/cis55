@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7F98D44D1CD1549000A1AEF2"
-               BuildableName = "DrawSVG.app"
-               BlueprintName = "DrawSVG"
+               BlueprintIdentifier = "7F98D4671CD154FA00A1AEF2"
+               BuildableName = "PocketSVGFramework.framework"
+               BlueprintName = "PocketSVGFramework"
                ReferencedContainer = "container:DrawSVG.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7F98D44D1CD1549000A1AEF2"
-            BuildableName = "DrawSVG.app"
-            BlueprintName = "DrawSVG"
-            ReferencedContainer = "container:DrawSVG.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7F98D44D1CD1549000A1AEF2"
-            BuildableName = "DrawSVG.app"
-            BlueprintName = "DrawSVG"
+            BlueprintIdentifier = "7F98D4671CD154FA00A1AEF2"
+            BuildableName = "PocketSVGFramework.framework"
+            BlueprintName = "PocketSVGFramework"
             ReferencedContainer = "container:DrawSVG.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7F98D44D1CD1549000A1AEF2"
-            BuildableName = "DrawSVG.app"
-            BlueprintName = "DrawSVG"
+            BlueprintIdentifier = "7F98D4671CD154FA00A1AEF2"
+            BuildableName = "PocketSVGFramework.framework"
+            BlueprintName = "PocketSVGFramework"
             ReferencedContainer = "container:DrawSVG.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
