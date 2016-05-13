@@ -82,6 +82,8 @@ class AboutViewController: UIViewController, UIScrollViewDelegate {
     }
     
     @IBAction func websiteButtonClick(sender: AnyObject) {
+        // UIAlertView is deprecated now, so use UIAlertController instead.
+        
         let alert = UIAlertController(title: NSLocalizedString("Open Safari?", comment: ""), message: "", preferredStyle: .Alert)
         alert.modalPresentationStyle = .Popover
         
