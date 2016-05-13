@@ -32,10 +32,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-
         for touch: AnyObject in touches {
             let positionInScene = touch.locationInNode(self)
             let touchedNode = self.nodeAtPoint(positionInScene)
+            
             if let name = touchedNode.name
             {
                 if name == "restartButton"
@@ -46,7 +46,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             } else {
                 lockMovement = false
                 jump()
-                
             }
         }
     }
@@ -155,7 +154,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //            berg.physicsBody = bergBody
             
             stage?.addChild(berg)
-            
         }
     }
     
@@ -172,16 +170,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         generateBergs()
         
         checkGameOver()
-    }
-    
-    func onIceberg() -> Bool {
-        var onBerg = false
-        for berg in stage!.children {
-            if penguinShadow!.intersectsNode(berg) {
-                onBerg = true
-            }
-        }
-        return onBerg
     }
     
     func jump() {
@@ -207,6 +195,46 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         penguinShadow?.runAction(counterSequence)
     }
     
+    func onIceberg() -> Bool {
+        var onBerg = false
+        for berg in stage!.children {
+            if penguinShadow!.intersectsNode(berg) {
+                onBerg = true
+            }
+        }
+        return onBerg
+    }
+    
+    func checkGameOver() {
+        if gameOver {
+            view?.paused = true
+            
+            self.backgroundColor = SKColor.redColor()
+            
+            let restartButton = SKLabelNode(text: "Restart")
+            restartButton.name = "restartButton"
+            restartButton.userInteractionEnabled = false
+            restartButton.fontName = "Avenir"
+            restartButton.fontSize = 24
+            restartButton.fontColor = SKColor.whiteColor()
+            restartButton.position = CGPoint(x: view!.frame.width * 0.5, y: view!.frame.height * 0.5)
+            addChild(restartButton)
+        }
+    }
+    
+    func restart() {
+        penguin.removeAllChildren()
+        removeAllChildren()
+        removeAllActions()
+        
+        gameOver = false
+        highestIceberg = 0
+        lockMovement = false
+        score = 0.0
+        yPosition = 0.0
+        createSceneContent()
+    }
+    
     func shakeScreen() {
         if enableScreenShake {
             let shakeAnimation = CAKeyframeAnimation(keyPath: "transform")
@@ -224,36 +252,5 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             view!.layer.addAnimation(shakeAnimation, forKey: nil)
         }
-    }
-    
-    func checkGameOver() {
-        if gameOver {
-            view?.paused = true
-            
-            self.backgroundColor = SKColor.redColor()
-            
-            let restartButton = SKLabelNode(text: "Restart")
-            restartButton.name = "restartButton"
-            restartButton.userInteractionEnabled = false
-            restartButton.fontName = "Avenir"
-            restartButton.fontSize = 24
-            restartButton.fontColor = SKColor.whiteColor()
-            restartButton.position = CGPoint(x: view!.frame.width * 0.5, y: view!.frame.height * 0.5)
-            addChild(restartButton)
-            
-        }
-    }
-    
-    func restart() {
-        penguin.removeAllChildren()
-        removeAllChildren()
-        removeAllActions()
-        
-        gameOver = false
-        highestIceberg = 0
-        lockMovement = false
-        score = 0.0
-        yPosition = 0.0
-        createSceneContent()
     }
 }
