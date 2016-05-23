@@ -18,72 +18,179 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kPf-cH-v0p">
-                                <rect key="frame" x="20" y="53" width="417" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kPf-cH-v0p">
+                                <rect key="frame" x="20" y="90" width="480" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="5sn-aT-4LV"/>
+                                    <constraint firstAttribute="height" constant="40" id="5sn-aT-4LV"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.19580897929999999" green="0.39525240379999999" blue="0.18896425859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wO6-uh-b8M">
-                                <rect key="frame" x="480" y="53" width="80" height="30"/>
+                                <rect key="frame" x="500" y="90" width="80" height="40"/>
+                                <color key="backgroundColor" red="0.26142201669999998" green="0.52419871790000006" blue="0.24803831479999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="WXF-a6-gjG"/>
+                                    <constraint firstAttribute="height" constant="40" id="WXF-a6-gjG"/>
                                     <constraint firstAttribute="width" constant="80" id="gYK-6v-my9"/>
                                 </constraints>
-                                <state key="normal" title="Convert"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldItalicMT" family="Times New Roman" pointSize="15"/>
+                                <state key="normal" title="Convert">
+                                    <color key="titleColor" red="0.98823529409999999" green="0.98039215690000003" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="convertButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0PM-k3-Ilf"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bc2-ID-t4a">
-                                <rect key="frame" x="20" y="122" width="534" height="40"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="5e8-AX-ws4"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STRING CONVERTER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzM-Er-4o9">
+                                <rect key="frame" x="0.0" y="40" width="600" height="24.5"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="22"/>
+                                <color key="textColor" red="0.26142201669999998" green="0.52419871790000006" blue="0.24803831479999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFx-1o-Axy">
-                                <rect key="frame" x="20" y="96" width="534" height="24"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="did-2O-Wbd">
+                                <rect key="frame" x="20" y="164" width="560" height="412"/>
+                                <color key="textColor" red="0.1958089793428619" green="0.3952524038461539" blue="0.18896425860267274" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="19i-6Y-aUx">
+                                <rect key="frame" x="20" y="20" width="560" height="62"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TWS-SR-VFa">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="62"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Qkk-Dj-gih">
+                                                <rect key="frame" x="0.0" y="0.0" width="112" height="62"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoM-6q-2d0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="112" height="39"/>
+                                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="24"/>
+                                                        <color key="textColor" red="0.19580897929999999" green="0.39525240379999999" blue="0.18896425859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Characters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Bi-0W-Lf9">
+                                                        <rect key="frame" x="0.0" y="39" width="112" height="23"/>
+                                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="14"/>
+                                                        <color key="textColor" red="0.19580897929999999" green="0.39525240379999999" blue="0.18896425859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="odc-1k-ktB">
+                                                <rect key="frame" x="112" y="0.0" width="112" height="62"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9X7-Yq-PLm">
+                                                        <rect key="frame" x="0.0" y="0.0" width="112" height="39"/>
+                                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="24"/>
+                                                        <color key="textColor" red="0.19580897929999999" green="0.39525240379999999" blue="0.18896425859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Characters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUX-Lb-cTN">
+                                                        <rect key="frame" x="0.0" y="39" width="112" height="23"/>
+                                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="14"/>
+                                                        <color key="textColor" red="0.19580897929999999" green="0.39525240379999999" blue="0.18896425859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="bdE-9L-p8q">
+                                                <rect key="frame" x="224" y="0.0" width="112" height="62"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ynq-qU-ouV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="112" height="39"/>
+                                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="24"/>
+                                                        <color key="textColor" red="0.19580897929999999" green="0.39525240379999999" blue="0.18896425859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Characters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2GX-dH-qx6">
+                                                        <rect key="frame" x="0.0" y="39" width="112" height="23"/>
+                                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="14"/>
+                                                        <color key="textColor" red="0.19580897929999999" green="0.39525240379999999" blue="0.18896425859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="o3v-60-xEO">
+                                                <rect key="frame" x="336" y="0.0" width="112" height="62"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVV-ZQ-DJD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="112" height="39"/>
+                                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="24"/>
+                                                        <color key="textColor" red="0.19580897929999999" green="0.39525240379999999" blue="0.18896425859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Characters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qw-HU-8yu">
+                                                        <rect key="frame" x="0.0" y="39" width="112" height="23"/>
+                                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="14"/>
+                                                        <color key="textColor" red="0.19580897929999999" green="0.39525240379999999" blue="0.18896425859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="FEE-Fu-R0v">
+                                                <rect key="frame" x="448" y="0.0" width="112" height="62"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pk-iY-YST">
+                                                        <rect key="frame" x="0.0" y="0.0" width="112" height="39"/>
+                                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="24"/>
+                                                        <color key="textColor" red="0.19580897929999999" green="0.39525240379999999" blue="0.18896425859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Characters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ja-h8-aOT">
+                                                        <rect key="frame" x="0.0" y="39" width="112" height="23"/>
+                                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="14"/>
+                                                        <color key="textColor" red="0.19580897929999999" green="0.39525240379999999" blue="0.18896425859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.98039215690000003" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="yjG-Bm-M5e"/>
+                                    <constraint firstItem="TWS-SR-VFa" firstAttribute="centerX" secondItem="19i-6Y-aUx" secondAttribute="centerX" id="4oT-qb-zME"/>
+                                    <constraint firstItem="TWS-SR-VFa" firstAttribute="centerY" secondItem="19i-6Y-aUx" secondAttribute="centerY" id="54z-tZ-mfW"/>
+                                    <constraint firstItem="TWS-SR-VFa" firstAttribute="width" secondItem="19i-6Y-aUx" secondAttribute="width" id="8dG-Ah-0Fg"/>
+                                    <constraint firstItem="TWS-SR-VFa" firstAttribute="height" secondItem="19i-6Y-aUx" secondAttribute="height" id="rsW-kg-GUR"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.98823529409999999" green="0.98039215690000003" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="wO6-uh-b8M" firstAttribute="leading" secondItem="kPf-cH-v0p" secondAttribute="trailing" constant="43" id="15o-Pv-ysQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="wO6-uh-b8M" secondAttribute="trailing" constant="20" id="1nw-Hx-YbK"/>
+                            <constraint firstItem="wO6-uh-b8M" firstAttribute="leading" secondItem="kPf-cH-v0p" secondAttribute="trailing" id="15o-Pv-ysQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wO6-uh-b8M" secondAttribute="trailing" id="1nw-Hx-YbK"/>
+                            <constraint firstItem="wO6-uh-b8M" firstAttribute="centerY" secondItem="kPf-cH-v0p" secondAttribute="centerY" id="2ho-c8-NNE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wO6-uh-b8M" secondAttribute="trailing" constant="26" id="3QK-VY-CVM"/>
-                            <constraint firstItem="bc2-ID-t4a" firstAttribute="top" secondItem="kPf-cH-v0p" secondAttribute="bottom" constant="39" id="8by-Rh-6sg"/>
+                            <constraint firstItem="did-2O-Wbd" firstAttribute="top" secondItem="wO6-uh-b8M" secondAttribute="bottom" constant="34" id="3iK-ii-bdw"/>
+                            <constraint firstItem="dzM-Er-4o9" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="IQ7-kK-VdO"/>
                             <constraint firstItem="kPf-cH-v0p" firstAttribute="trailing" secondItem="wO6-uh-b8M" secondAttribute="trailing" id="IoN-AU-MNC"/>
+                            <constraint firstItem="19i-6Y-aUx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Jkh-wx-ILv"/>
                             <constraint firstAttribute="leadingMargin" secondItem="kPf-cH-v0p" secondAttribute="leading" id="RgC-2L-Pen"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="bc2-ID-t4a" secondAttribute="leading" id="aoG-bH-BW3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bc2-ID-t4a" secondAttribute="trailing" constant="26" id="bAr-Wf-pyX"/>
-                            <constraint firstItem="TFx-1o-Axy" firstAttribute="centerX" secondItem="bc2-ID-t4a" secondAttribute="centerX" id="cxq-FA-cgO"/>
-                            <constraint firstItem="bc2-ID-t4a" firstAttribute="top" secondItem="TFx-1o-Axy" secondAttribute="bottom" constant="2" id="nuL-vY-hhY"/>
-                            <constraint firstItem="TFx-1o-Axy" firstAttribute="width" secondItem="bc2-ID-t4a" secondAttribute="width" id="pee-eS-1b7"/>
-                            <constraint firstItem="kPf-cH-v0p" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="33" id="tLd-cd-PKb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="did-2O-Wbd" secondAttribute="bottom" constant="24" id="apj-do-iTp"/>
+                            <constraint firstItem="19i-6Y-aUx" firstAttribute="trailing" secondItem="wO6-uh-b8M" secondAttribute="trailing" id="hQ5-mb-auL"/>
+                            <constraint firstItem="kPf-cH-v0p" firstAttribute="top" secondItem="19i-6Y-aUx" secondAttribute="bottom" constant="8" id="hQh-dT-14C"/>
+                            <constraint firstItem="dzM-Er-4o9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mSK-st-eac"/>
+                            <constraint firstItem="19i-6Y-aUx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qaE-l1-l5g"/>
+                            <constraint firstItem="kPf-cH-v0p" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="tLd-cd-PKb"/>
                             <constraint firstItem="wO6-uh-b8M" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="33" id="u54-Id-uC5"/>
+                            <constraint firstItem="19i-6Y-aUx" firstAttribute="leading" secondItem="kPf-cH-v0p" secondAttribute="leading" id="u60-tW-g3Y"/>
+                            <constraint firstItem="did-2O-Wbd" firstAttribute="leading" secondItem="kPf-cH-v0p" secondAttribute="leading" id="wpf-bD-gsm"/>
+                            <constraint firstItem="dzM-Er-4o9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="xgw-d2-Hr9"/>
+                            <constraint firstItem="did-2O-Wbd" firstAttribute="trailing" secondItem="wO6-uh-b8M" secondAttribute="trailing" id="zAI-D4-mD5"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="IoN-AU-MNC"/>
                                 <exclude reference="3QK-VY-CVM"/>
+                                <exclude reference="u54-Id-uC5"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="infoLabel" destination="TFx-1o-Axy" id="MLs-Qr-pH2"/>
                         <outlet property="inputTextField" destination="kPf-cH-v0p" id="Y04-5g-rk9"/>
-                        <outlet property="outputLabel" destination="bc2-ID-t4a" id="f3E-S0-6Sy"/>
+                        <outlet property="outputTextView" destination="did-2O-Wbd" id="EWl-KZ-f40"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

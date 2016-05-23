@@ -11,12 +11,21 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var inputTextField: UITextField!
-    @IBOutlet var outputLabel: UILabel!
-    @IBOutlet var infoLabel: UILabel!
+    @IBOutlet var outputTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        inputTextField.layer.borderWidth = 1
+        inputTextField.layer.borderColor = UIColor(red:0.20, green:0.47, blue:0.18, alpha:1.0).CGColor
+        inputTextField.tintColor = UIColor(red:0.20, green:0.47, blue:0.18, alpha:1.0)
+        
+        outputTextView.layer.borderWidth = 1
+        outputTextView.layer.borderColor = UIColor(red:0.20, green:0.47, blue:0.18, alpha:1.0).CGColor
+        
+//        infoLabel.backgroundColor = UIColor(red:0.20, green:0.47, blue:0.18, alpha:1.0)
+//        outputTextView.bounds = CGRect(x: outputLabel.frame.origin.x + 10, y: outputLabel.frame.origin.y, width: outputLabel.frame.width, height: outputLabel.frame.height)
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,6 +34,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func convertButtonClick(sender: AnyObject) {
+        inputTextField.resignFirstResponder()
+        
         let inputText = inputTextField.text
         
         let charactersInInput = inputText!.characters.count
@@ -32,32 +43,45 @@ class ViewController: UIViewController {
         let uppercaseSet = NSCharacterSet.uppercaseLetterCharacterSet()
         let lowercaseSet = NSCharacterSet.lowercaseLetterCharacterSet()
         let numeralSet = NSCharacterSet.decimalDigitCharacterSet()
-        let nonAlphanumericSet = NSMutableCharacterSet.invert(NSMutableCharacterSet.alphanumericCharacterSet())
+//        let nonAlphanumericSet = NSMutableCharacterSet.invert(NSMutableCharacterSet.alphanumericCharacterSet())
+        let nonAlphanumericSet = NSMutableCharacterSet.alphanumericCharacterSet().invertedSet
         
 //        let uppercaseRange = inputText?.rangeOfCharacterFromSet(uppercaseSet)
         
         var numberOfUppercase = 0
+        var numberOfLowercase = 0
+        var numberOfNumerals = 0
+        var numberOfNonAlphanumeric = 0
         
-        var characters = [String]()
+        var outputString = ""
         
         for character in inputText!.characters {
-            characters.append(String(character))
-        }
-        
-        for character in characters {
-            let range = character.rangeOfCharacterFromSet(uppercaseSet)
-
-            if let test = range {
-                print(test)
+            
+            if let _ = String(character).rangeOfCharacterFromSet(uppercaseSet)
+            {
                 numberOfUppercase++
-            } else {
-                print("not")
+                outputString += String(character).lowercaseString
             }
+            else if let _ = String(character).rangeOfCharacterFromSet(lowercaseSet)
+            {
+                numberOfLowercase++
+                outputString += String(character).uppercaseString
+            }
+            else if let _ = String(character).rangeOfCharacterFromSet(numeralSet)
+            {
+                numberOfNumerals++
+                outputString += String(character)
+            }
+            else if let _ = String(character).rangeOfCharacterFromSet(nonAlphanumericSet)
+            {
+                numberOfNonAlphanumeric++
+                outputString += String(character)
+            }
+
         }
         
         
-        
-        infoLabel.text = String(charactersInInput) + " Characters, " + String(numberOfUppercase) + " Uppercase letters."
+                outputTextView.text = outputString
     }
 
 }
