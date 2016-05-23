@@ -18,7 +18,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var stage : SKSpriteNode?
     var yIncrement : CGFloat?
     var gameOver = false
-    var highestIceberg = 0
+//    var highestIceberg = 0
     var lockMovement = false
     var score: CGFloat = 0.0
     var yPosition: CGFloat = 0.0
@@ -228,7 +228,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         removeAllActions()
         
         gameOver = false
-        highestIceberg = 0
+//        highestIceberg = 0
         lockMovement = false
         score = 0.0
         yPosition = 0.0
