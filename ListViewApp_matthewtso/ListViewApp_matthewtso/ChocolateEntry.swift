@@ -7,21 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
-class ChocolateEntry: NSObject {
-    var name = ""
-    var taste = ""
-    var imageName = ""
-    var origin = ""
-//    var percentCacao: Int?
-//    var chocolatier: String?
-//    var type: Int?
-    
-    init(name: String, imageName: String, taste: String, origin: String)
-    {
-        self.name = name
-        self.taste = taste
-        self.imageName = imageName
-        self.origin = origin
-    }
+class ChocolateEntry: NSManagedObject {
+    @NSManaged var name: String!
+    @NSManaged var imageName: String!
+    @NSManaged var taste: String!
+    @NSManaged var origin: String!
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AddItemViewController: UIViewController {
 
@@ -15,7 +16,7 @@ class AddItemViewController: UIViewController {
     @IBOutlet var addTaste: UITextField!
     @IBOutlet var addOrigin: UITextField!
     
-    var newChocolateEntry: (ChocolateEntry -> ())!
+    var newChocolateEntry: ChocolateEntry!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,23 +29,34 @@ class AddItemViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func cancelButtonClick(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
-
-    @IBAction func saveButtonClick(sender: AnyObject) {
-        newChocolateEntry(ChocolateEntry(name: addName.text!, imageName: addImageName.text!, taste: addTaste.text!, origin: addOrigin.text!))
-        self.dismissViewControllerAnimated(true, completion: nil)
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
     
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "saveSegue" {
+            let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+            
+            newChocolateEntry = NSEntityDescription.insertNewObjectForEntityForName("ChocolateEntry", inManagedObjectContext: managedObjectContext) as! ChocolateEntry
+            
+            newChocolateEntry.name = addName.text
+            newChocolateEntry.imageName = addImageName.text
+            newChocolateEntry.taste = addTaste.text
+            newChocolateEntry.origin = addOrigin.text
+            
+            do {
+                try managedObjectContext.save()
+            } catch {
+                print(error)
+            }
+        }
     }
-    */
+
 
 }

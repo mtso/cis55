@@ -18,46 +18,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1BV-t7-Fk0">
-                                <rect key="frame" x="20" y="20" width="48" height="30"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleColor" red="0.77647058820000003" green="0.66666666669999997" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancelButtonClick:" destination="MIx-A7-8C9" eventType="touchUpInside" id="HoP-i3-CEF"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of Chocolate" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="82i-KF-ONx">
-                                <rect key="frame" x="20" y="78" width="280" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of Chocolate" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="82i-KF-ONx">
+                                <rect key="frame" x="16" y="84" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Image Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lzu-f8-OWE">
-                                <rect key="frame" x="20" y="116" width="280" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Image Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lzu-f8-OWE">
+                                <rect key="frame" x="16" y="129" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Taste" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m8t-yv-vj6">
-                                <rect key="frame" x="20" y="154" width="280" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Taste" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m8t-yv-vj6">
+                                <rect key="frame" x="16" y="174" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Origin" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q2Z-Kw-6aR">
-                                <rect key="frame" x="20" y="192" width="280" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Origin" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q2Z-Kw-6aR">
+                                <rect key="frame" x="16" y="219" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJ7-pV-sXU">
-                                <rect key="frame" x="266" y="20" width="34" height="30"/>
-                                <state key="normal" title="Save">
-                                    <color key="titleColor" red="0.77647058820000003" green="0.66666666669999997" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="saveButtonClick:" destination="MIx-A7-8C9" eventType="touchUpInside" id="XAT-4g-gG9"/>
-                                </connections>
-                            </button>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2To-TA-alv">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <color key="tintColor" red="0.77647058820000003" green="0.66666666669999997" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.12549019610000001" green="0.1058823529" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.77647058820000003" green="0.66666666669999997" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Add Chocolate" id="vfe-UW-h1c">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="sUD-Hm-qgw">
+                                            <connections>
+                                                <segue destination="bJw-aA-jHr" kind="unwind" identifier="cancelSegue" unwindAction="cancel:" id="lxL-C4-Ez4"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="BUx-YP-kW7">
+                                            <connections>
+                                                <segue destination="bJw-aA-jHr" kind="unwind" identifier="saveSegue" unwindAction="save:" id="yXQ-wv-Fs5"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.12549019610000001" green="0.1058823529" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="lzu-f8-OWE" firstAttribute="top" secondItem="82i-KF-ONx" secondAttribute="bottom" constant="15" id="1RN-kC-yP2"/>
+                            <constraint firstItem="2To-TA-alv" firstAttribute="top" secondItem="joW-3I-hMd" secondAttribute="bottom" id="2bq-EE-Mef"/>
+                            <constraint firstItem="2To-TA-alv" firstAttribute="width" secondItem="wdb-Ar-Usy" secondAttribute="width" id="75x-dj-gNJ"/>
+                            <constraint firstItem="Q2Z-Kw-6aR" firstAttribute="centerX" secondItem="82i-KF-ONx" secondAttribute="centerX" id="8yU-vX-wyD"/>
+                            <constraint firstItem="m8t-yv-vj6" firstAttribute="width" secondItem="82i-KF-ONx" secondAttribute="width" id="A5p-qd-iYK"/>
+                            <constraint firstItem="Q2Z-Kw-6aR" firstAttribute="width" secondItem="82i-KF-ONx" secondAttribute="width" id="MTl-lE-cWj"/>
+                            <constraint firstItem="m8t-yv-vj6" firstAttribute="centerX" secondItem="82i-KF-ONx" secondAttribute="centerX" id="Mgi-BX-MoJ"/>
+                            <constraint firstItem="2To-TA-alv" firstAttribute="centerX" secondItem="wdb-Ar-Usy" secondAttribute="centerX" id="V2U-QW-qZR"/>
+                            <constraint firstItem="82i-KF-ONx" firstAttribute="top" secondItem="2To-TA-alv" secondAttribute="bottom" constant="20" id="XdU-CY-7HP"/>
+                            <constraint firstItem="m8t-yv-vj6" firstAttribute="top" secondItem="lzu-f8-OWE" secondAttribute="bottom" constant="15" id="c0k-Hk-g1I"/>
+                            <constraint firstItem="lzu-f8-OWE" firstAttribute="width" secondItem="82i-KF-ONx" secondAttribute="width" id="fGT-7x-mSt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="82i-KF-ONx" secondAttribute="trailing" id="k8Z-QL-mRd"/>
+                            <constraint firstItem="lzu-f8-OWE" firstAttribute="centerX" secondItem="82i-KF-ONx" secondAttribute="centerX" id="kvr-jc-2cC"/>
+                            <constraint firstItem="Q2Z-Kw-6aR" firstAttribute="top" secondItem="m8t-yv-vj6" secondAttribute="bottom" constant="15" id="ox1-zu-aYM"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="82i-KF-ONx" secondAttribute="leading" id="z14-sO-PWn"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="addImageName" destination="lzu-f8-OWE" id="Qht-kW-rVN"/>
@@ -67,6 +88,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xiR-5t-5Wf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="bJw-aA-jHr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1690" y="83"/>
         </scene>

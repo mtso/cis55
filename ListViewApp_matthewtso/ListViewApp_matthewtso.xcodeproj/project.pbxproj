@@ -12,6 +12,7 @@
 		7F4285D11CDB08E900C79114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F4285D01CDB08E900C79114 /* Assets.xcassets */; };
 		7F4285D41CDB08E900C79114 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F4285D21CDB08E900C79114 /* LaunchScreen.storyboard */; };
 		7FCF6DF81CFD110900ED0EE9 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF6DF71CFD110900ED0EE9 /* AddItemViewController.swift */; };
+		7FCF6E1C1CFD258A00ED0EE9 /* ListViewApp_matthewtso.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF6E1A1CFD258A00ED0EE9 /* ListViewApp_matthewtso.xcdatamodeld */; };
 		7FF52C601CDC82E2003A725B /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF52C5F1CDC82E2003A725B /* ListTableViewController.swift */; };
 		7FF52C621CDC841C003A725B /* ChocolateEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF52C611CDC841C003A725B /* ChocolateEntry.swift */; };
 		7FF52C641CDC86FB003A725B /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF52C631CDC86FB003A725B /* ListTableViewCell.swift */; };
@@ -29,6 +30,7 @@
 		7F4285D31CDB08E900C79114 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F4285D51CDB08E900C79114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FCF6DF71CFD110900ED0EE9 /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		7FCF6E1B1CFD258A00ED0EE9 /* ListViewApp_matthewtso.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ListViewApp_matthewtso.xcdatamodel; sourceTree = "<group>"; };
 		7FF52C5F1CDC82E2003A725B /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		7FF52C611CDC841C003A725B /* ChocolateEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChocolateEntry.swift; sourceTree = "<group>"; };
 		7FF52C631CDC86FB003A725B /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				7F4285CD1CDB08E900C79114 /* Main.storyboard */,
 				7F4285D01CDB08E900C79114 /* Assets.xcassets */,
 				7F4285D21CDB08E900C79114 /* LaunchScreen.storyboard */,
+				7FCF6E1A1CFD258A00ED0EE9 /* ListViewApp_matthewtso.xcdatamodeld */,
 				7F4285D51CDB08E900C79114 /* Info.plist */,
 			);
 			path = ListViewApp_matthewtso;
@@ -162,6 +165,7 @@
 				7FF52C6A1CDCA526003A725B /* DetailImageTableViewCell.swift in Sources */,
 				7FF52C641CDC86FB003A725B /* ListTableViewCell.swift in Sources */,
 				7FCF6DF81CFD110900ED0EE9 /* AddItemViewController.swift in Sources */,
+				7FCF6E1C1CFD258A00ED0EE9 /* ListViewApp_matthewtso.xcdatamodeld in Sources */,
 				7FF52C621CDC841C003A725B /* ChocolateEntry.swift in Sources */,
 				7FF52C6C1CDD37E7003A725B /* AboutViewController.swift in Sources */,
 				7FF52C601CDC82E2003A725B /* ListTableViewController.swift in Sources */,
@@ -315,6 +319,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7FCF6E1A1CFD258A00ED0EE9 /* ListViewApp_matthewtso.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7FCF6E1B1CFD258A00ED0EE9 /* ListViewApp_matthewtso.xcdatamodel */,
+			);
+			currentVersion = 7FCF6E1B1CFD258A00ED0EE9 /* ListViewApp_matthewtso.xcdatamodel */;
+			path = ListViewApp_matthewtso.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7F4285BE1CDB08E900C79114 /* Project object */;
 }

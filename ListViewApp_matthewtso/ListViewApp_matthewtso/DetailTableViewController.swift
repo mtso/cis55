@@ -48,7 +48,11 @@ class DetailTableViewController: UITableViewController {
         {
             let cell = tableView.dequeueReusableCellWithIdentifier("DetailImageCell", forIndexPath: indexPath) as! DetailImageTableViewCell
             
-            cell.detailImage?.image = UIImage(named: chocolateEntry!.imageName)
+            if let image = UIImage(named: chocolateEntry!.imageName) {
+                cell.detailImage.image = image
+            } else  {
+                cell.detailImage.image = UIImage(named: "chocolate_placeholder")
+            }
 
             return cell
         }
