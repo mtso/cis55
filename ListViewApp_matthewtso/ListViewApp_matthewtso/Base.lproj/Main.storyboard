@@ -6,6 +6,70 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Add Item View Controller-->
+        <scene sceneID="6Gv-sF-fvu">
+            <objects>
+                <viewController id="MIx-A7-8C9" customClass="AddItemViewController" customModule="ListViewApp_matthewtso" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="joW-3I-hMd"/>
+                        <viewControllerLayoutGuide type="bottom" id="XAP-fH-BhX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wdb-Ar-Usy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1BV-t7-Fk0">
+                                <rect key="frame" x="20" y="20" width="48" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.77647058820000003" green="0.66666666669999997" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonClick:" destination="MIx-A7-8C9" eventType="touchUpInside" id="HoP-i3-CEF"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of Chocolate" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="82i-KF-ONx">
+                                <rect key="frame" x="20" y="78" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Image Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lzu-f8-OWE">
+                                <rect key="frame" x="20" y="116" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Taste" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m8t-yv-vj6">
+                                <rect key="frame" x="20" y="154" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Origin" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q2Z-Kw-6aR">
+                                <rect key="frame" x="20" y="192" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJ7-pV-sXU">
+                                <rect key="frame" x="266" y="20" width="34" height="30"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.77647058820000003" green="0.66666666669999997" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButtonClick:" destination="MIx-A7-8C9" eventType="touchUpInside" id="XAT-4g-gG9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12549019610000001" green="0.1058823529" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="addImageName" destination="lzu-f8-OWE" id="Qht-kW-rVN"/>
+                        <outlet property="addName" destination="82i-KF-ONx" id="oix-8H-EnR"/>
+                        <outlet property="addOrigin" destination="Q2Z-Kw-6aR" id="ARP-I7-bxL"/>
+                        <outlet property="addTaste" destination="m8t-yv-vj6" id="Iq8-JQ-Zxg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xiR-5t-5Wf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1690" y="83"/>
+        </scene>
         <!--Chocolate List-->
         <scene sceneID="Oh7-8s-16W">
             <objects>
@@ -57,7 +121,13 @@
                             <outlet property="delegate" destination="m0E-LZ-kaX" id="kdj-eG-lJV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Chocolate List" id="pNW-MB-cb8"/>
+                    <navigationItem key="navigationItem" title="Chocolate List" id="pNW-MB-cb8">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="BrS-pS-2M6">
+                            <connections>
+                                <segue destination="MIx-A7-8C9" kind="modal" identifier="AddNewItem" id="b86-KE-DI8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Awx-n3-ke3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

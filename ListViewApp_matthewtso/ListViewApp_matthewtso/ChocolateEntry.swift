@@ -13,7 +13,7 @@ class ChocolateEntry: NSObject {
     var taste = ""
     var imageName = ""
     var origin = ""
-//    var percentCacao = 0
+//    var percentCacao: Int?
 //    var chocolatier: String?
 //    var type: Int?
     

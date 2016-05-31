@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListTableViewController: UITableViewController {
+class ListTableViewController: UITableViewController, UISearchResultsUpdating {
     
     let cellIdentifier = "ListCell"
     var entries = [
@@ -33,6 +33,8 @@ class ListTableViewController: UITableViewController {
         ChocolateEntry(name: "Soma Dancing in your Head", imageName: "soma_dancing_chocolate", taste: "smoked wood", origin: "Ghana, Ecuador, Peru"),
         ChocolateEntry(name: "Soma Dark Chocolate", imageName: "soma_dark_chocolate", taste: "toasted corn nuts", origin: "—")
     ]
+    var searchController : UISearchController!
+    var searchResults = [ChocolateEntry]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +45,17 @@ class ListTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.sizeToFit()
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.dimsBackgroundDuringPresentation = false
+        tableView.tableHeaderView = searchController.searchBar
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,67 +63,74 @@ class ListTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "DetailSegue" {
-            let detailViewController = segue.destinationViewController as! DetailTableViewController
-            let indexPath = tableView.indexPathForSelectedRow
-            
-            detailViewController.chocolateEntry = entries[indexPath!.row]
+    // MARK: - Search results updating
+    
+    func filterContentForSearchText(searchText: String) {
+        searchResults = entries.filter({ (entry: ChocolateEntry) -> Bool in
+            let nameMatch = entry.name.rangeOfString(searchText, options: .CaseInsensitiveSearch)
+            return nameMatch != nil
+        })
+    }
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        if let searchText = searchController.searchBar.text {
+            filterContentForSearchText(searchText)
+            tableView.reloadData()
         }
     }
 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+        // Return the number of sections
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return entries.count
+        // Return the number of rows
+        return searchController.active ? searchResults.count : entries.count
     }
-
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ListTableViewCell
 
         // Configure the cell...
-        cell.cellTitle.text = entries[indexPath.row].name
-        cell.cellImage.image = UIImage(named: entries[indexPath.row].imageName)
+        let entry = searchController.active ? searchResults[indexPath.row] : entries[indexPath.row]
+        
+        cell.cellTitle.text = entry.name
+        cell.cellImage.image = UIImage(named: entry.imageName)
+        
         cell.cellImage.layer.cornerRadius = 6 //cell.cellImage.frame.size.height * 0.5
         cell.cellImage.clipsToBounds = true
         
         let selectedColorView = UIView()
         selectedColorView.backgroundColor = UIColor(red: 0.92, green:0.87, blue:0.78, alpha:0.3)
-        
         cell.selectedBackgroundView = selectedColorView
 
-                
         return cell
     }
-
-
-    /*
+    
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
-        return true
+        return searchController.active ? false : true
     }
-    */
 
-    /*
+
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
+            entries.removeAtIndex(indexPath.row)
+            
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view            
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
@@ -127,14 +147,26 @@ class ListTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "DetailSegue" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let detailViewController = segue.destinationViewController as! DetailTableViewController
+                
+                detailViewController.chocolateEntry = searchController.active ? searchResults[indexPath.row] : entries[indexPath.row]
+            }
+        }
+        else if segue.identifier == "AddNewItem" {
+            let addViewController = segue.destinationViewController as! AddItemViewController
+            
+            addViewController.newChocolateEntry = addData
+        }
     }
-    */
+    
+    func addData(newItem: ChocolateEntry) {
+        entries.append(newItem)
+    }
 
 }
