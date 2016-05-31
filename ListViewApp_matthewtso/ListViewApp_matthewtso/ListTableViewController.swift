@@ -208,6 +208,8 @@ class ListTableViewController: UITableViewController, UISearchResultsUpdating, N
                 
                 detailViewController.chocolateEntry = searchController.active ? searchResults[indexPath.row] : entries[indexPath.row]
             }
+        } else if segue.identifier == "AddNewItem" {
+            searchController.active = false
         }
     }
     
