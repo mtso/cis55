@@ -49,6 +49,7 @@ class AddItemViewController: UIViewController {
             newChocolateEntry.imageName = addImageName.text
             newChocolateEntry.taste = addTaste.text
             newChocolateEntry.origin = addOrigin.text
+            newChocolateEntry.percentCacao = 4
             
             do {
                 try managedObjectContext.save()

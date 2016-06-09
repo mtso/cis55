@@ -252,6 +252,7 @@ class ListTableViewController: UITableViewController, UISearchResultsUpdating, N
             initialChocolateEntry.imageName = entry.imageName
             initialChocolateEntry.taste = entry.taste
             initialChocolateEntry.origin = entry.origin
+            initialChocolateEntry.percentCacao = 4
         }
         
         do {

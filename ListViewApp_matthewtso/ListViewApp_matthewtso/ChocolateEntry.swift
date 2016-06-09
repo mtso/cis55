@@ -14,4 +14,5 @@ class ChocolateEntry: NSManagedObject {
     @NSManaged var imageName: String!
     @NSManaged var taste: String!
     @NSManaged var origin: String!
+    @NSManaged var percentCacao: NSNumber!
 }
