@@ -20,36 +20,6 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Oh0-nH-jkT">
                                 <rect key="frame" x="0.0" y="0.0" width="606" height="439"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18Q-uY-qLq">
-                                <rect key="frame" x="74" y="557" width="47" height="30"/>
-                                <state key="normal" title="Locate"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="555" width="47" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="getCurrentLocationButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QOZ-H2-aQ6"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOv-h9-mLy">
-                                <rect key="frame" x="221" y="557" width="50" height="30"/>
-                                <state key="normal" title="Nearby"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="167" y="555" width="50" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="showNearbyButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QXY-dN-huu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWa-m3-aMB">
-                                <rect key="frame" x="364" y="557" width="70" height="30"/>
-                                <state key="normal" title="Directions"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="310" y="555" width="70" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="showDirectionsButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8vt-FN-nag"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="From" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f75-IW-Fir">
                                 <rect key="frame" x="74" y="472" width="40" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -84,8 +54,77 @@
                                     <rect key="frame" x="132" y="492" width="238" height="30"/>
                                 </variation>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18Q-uY-qLq">
+                                <rect key="frame" x="74" y="557" width="47" height="30"/>
+                                <state key="normal" title="Locate"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="542" width="47" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="getCurrentLocationButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QOZ-H2-aQ6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOv-h9-mLy">
+                                <rect key="frame" x="221" y="557" width="50" height="30"/>
+                                <state key="normal" title="Nearby"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="104" y="542" width="50" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="showNearbyButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QXY-dN-huu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWa-m3-aMB">
+                                <rect key="frame" x="364" y="557" width="70" height="30"/>
+                                <state key="normal" title="Directions"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="189" y="542" width="70" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="showDirectionsButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8vt-FN-nag"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Mkg-8q-odF">
+                                <rect key="frame" x="-60" y="-14" width="121" height="29"/>
+                                <segments>
+                                    <segment title="Walking"/>
+                                    <segment title="Automobile"/>
+                                    <segment title="Public Transit"/>
+                                </segments>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="411" width="350" height="29"/>
+                                </variation>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Oh0-nH-jkT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="Nw9-8p-lv4"/>
+                            <constraint firstItem="Oh0-nH-jkT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TH7-uX-kBX"/>
+                            <constraint firstItem="Oh0-nH-jkT" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="pUx-IM-iQH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Oh0-nH-jkT" secondAttribute="bottom" constant="161" id="wfT-cH-xQN"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Mkg-8q-odF"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Nw9-8p-lv4"/>
+                                <exclude reference="TH7-uX-kBX"/>
+                                <exclude reference="pUx-IM-iQH"/>
+                                <exclude reference="wfT-cH-xQN"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Mkg-8q-odF"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Nw9-8p-lv4"/>
+                                <include reference="TH7-uX-kBX"/>
+                                <include reference="pUx-IM-iQH"/>
+                                <include reference="wfT-cH-xQN"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="destinationAddressTextField" destination="nIo-gY-pyN" id="l97-6x-mcR"/>
@@ -95,7 +134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="400"/>
+            <point key="canvasLocation" x="304.5" y="400"/>
         </scene>
     </scenes>
 </document>

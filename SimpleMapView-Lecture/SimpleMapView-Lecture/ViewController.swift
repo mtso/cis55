@@ -72,7 +72,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         let directionRequest = MKDirectionsRequest()
         let currentTransportType:MKDirectionsTransportType = .Automobile
         var currentRoute:MKRoute?
-        destinationAddress = ""//destinationAddressTextField.text //""
+        destinationAddress = ""
         
         // Set the source and destination of the route
         directionRequest.source = MKMapItem.mapItemForCurrentLocation()
