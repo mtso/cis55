@@ -1,5 +1,13 @@
 //: Playground - noun: a place where people can play
 
+import Darwin
+
+let a:Double = 1; let b:Double = -1; let c:Double = -2
+let result = (-b + sqrt(b * b - 4 * a * c)) / (2.0 * a)
+
+/*
+// Delegation pattern tutorial from RayWenderlich
+ 
 import UIKit
 
 @objc protocol Speaker {
@@ -66,8 +74,13 @@ class Ray: Speaker {
 let sim = DateSimulator(a: Vicki(), b: Ray())
 sim.delegate = LoggingDateSimulator()
 sim.simulate()
+*/
 
-/*
+
+
+/* 
+// Difficulty Progression Exponential Formula
+ 
 let distances = [1.0, 2000.0, 10000.0, 1000000.0, 1000000000.0]
 
 for distance in distances {
