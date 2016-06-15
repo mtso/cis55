@@ -23,9 +23,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     var locationManager = CLLocationManager()
     var geocoder = CLGeocoder()
     
-    var testSteps = ["Step 1", "Step 2"]
     var directionSteps = [String]()
-    
     var startingAddressText = ""
     var destinationAddressText = ""
     
@@ -40,7 +38,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
         
         mapView.delegate = self
-
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "textFieldDidChange", name: UITextFieldTextDidChangeNotification, object: startingAddressTextField)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "textFieldDidChange", name: UITextFieldTextDidChangeNotification, object: destinationAddressTextField)
@@ -56,7 +53,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
 
     @IBAction func autofillButtonClick(sender: AnyObject) {
-        print("autofill")
         startingAddressTextField.text = mapView.userLocation.title
     }
     
@@ -67,20 +63,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
 
     @IBAction func routeButtonClick(sender: AnyObject) {
+        /* == Routing procedure ==
+         * Separate each geocoder process into its own method because
+         * each geocoder must finish before using returned placemarks
+         * for requesting directions from MapKit.
+         */
+        
         routeActivityIndicator.startAnimating()
         routeActivityIndicator.hidden = false
         
-        var source: MKMapItem?
-        var destination: MKMapItem?
-        
-        // Start geocoder for starting address
         if startingAddressTextField.text == "Current Location" {
-            source = MKMapItem.mapItemForCurrentLocation()
+            let source = MKMapItem.mapItemForCurrentLocation()
             
-            findDestinationAndRoute(source!)
+            findDestinationAndRoute(source)
         } else {
             let startingAddress = startingAddressTextField.text
             
+            // Start geocoder for starting address
             geocoder.geocodeAddressString(startingAddress!, completionHandler: {
                 (placemarks: [CLPlacemark]?, error: NSError?) in
                 if error != nil {
@@ -90,16 +89,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
 
                 if placemarks != nil && placemarks!.count > 0 {
                     let placemark = placemarks![0] as CLPlacemark
-                    source = MKMapItem(placemark: MKPlacemark(placemark: placemark))
+                    let source = MKMapItem(placemark: MKPlacemark(placemark: placemark))
                     
-                    self.findDestinationAndRoute(source!)
+                    self.findDestinationAndRoute(source)
                 }
             })
         }
     }
     
     func findDestinationAndRoute(source: MKMapItem) {
-        // Start geocoder for destination address
         if self.destinationAddressTextField.text == "Current Location" {
             let destination = MKMapItem.mapItemForCurrentLocation()
             
@@ -107,6 +105,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         } else {
             let destinationAddress = self.destinationAddressTextField.text
             
+            // Start geocoder for destination address
             self.geocoder.geocodeAddressString(destinationAddress!, completionHandler: {
                 (placemarks: [CLPlacemark]?, error: NSError?) in
                 if error != nil {
@@ -188,7 +187,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(overlay: overlay)
-        renderer.strokeColor = UIColor.blueColor()
+        renderer.strokeColor = UIColor(red:0.00, green:0.48, blue:1.00, alpha:1.0)
         renderer.lineWidth = 3
         
         return renderer
