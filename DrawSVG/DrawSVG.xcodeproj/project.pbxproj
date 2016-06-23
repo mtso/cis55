@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F21A7C71D1A2F1A005FB0CE /* square_within_square.svg in Resources */ = {isa = PBXBuildFile; fileRef = 7F21A7C61D1A2F1A005FB0CE /* square_within_square.svg */; };
-		7F21A7C91D1A2FE9005FB0CE /* donut.svg in Resources */ = {isa = PBXBuildFile; fileRef = 7F21A7C81D1A2FE9005FB0CE /* donut.svg */; };
-		7F362E281D1C6EB4001918C7 /* lumpy_squares.svg in Resources */ = {isa = PBXBuildFile; fileRef = 7F362E271D1C6EB4001918C7 /* lumpy_squares.svg */; };
+		7F362E361D1C825A001918C7 /* donut.svg in Resources */ = {isa = PBXBuildFile; fileRef = 7F362E311D1C825A001918C7 /* donut.svg */; };
+		7F362E371D1C825A001918C7 /* floorplan.svg in Resources */ = {isa = PBXBuildFile; fileRef = 7F362E321D1C825A001918C7 /* floorplan.svg */; };
+		7F362E381D1C825A001918C7 /* lumpy_donuts.svg in Resources */ = {isa = PBXBuildFile; fileRef = 7F362E331D1C825A001918C7 /* lumpy_donuts.svg */; };
+		7F362E391D1C825A001918C7 /* lumpy_squares.svg in Resources */ = {isa = PBXBuildFile; fileRef = 7F362E341D1C825A001918C7 /* lumpy_squares.svg */; };
+		7F362E3A1D1C825A001918C7 /* square_within_square.svg in Resources */ = {isa = PBXBuildFile; fileRef = 7F362E351D1C825A001918C7 /* square_within_square.svg */; };
 		7F98D4521CD1549000A1AEF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98D4511CD1549000A1AEF2 /* AppDelegate.swift */; };
 		7F98D4541CD1549000A1AEF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98D4531CD1549000A1AEF2 /* ViewController.swift */; };
 		7F98D4571CD1549000A1AEF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F98D4551CD1549000A1AEF2 /* Main.storyboard */; };
@@ -20,7 +22,6 @@
 		7F98D4701CD154FA00A1AEF2 /* PocketSVGFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7F98D4681CD154FA00A1AEF2 /* PocketSVGFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7F98D4771CD1555F00A1AEF2 /* PocketSVG.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F98D4751CD1555F00A1AEF2 /* PocketSVG.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7F98D4781CD1555F00A1AEF2 /* PocketSVG.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F98D4761CD1555F00A1AEF2 /* PocketSVG.m */; };
-		7F98D47C1CD1562F00A1AEF2 /* floorplan.svg in Resources */ = {isa = PBXBuildFile; fileRef = 7F98D47B1CD1562F00A1AEF2 /* floorplan.svg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,9 +49,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7F21A7C61D1A2F1A005FB0CE /* square_within_square.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = square_within_square.svg; sourceTree = "<group>"; };
-		7F21A7C81D1A2FE9005FB0CE /* donut.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = donut.svg; sourceTree = "<group>"; };
-		7F362E271D1C6EB4001918C7 /* lumpy_squares.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = lumpy_squares.svg; sourceTree = "<group>"; };
+		7F362E311D1C825A001918C7 /* donut.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = donut.svg; sourceTree = "<group>"; };
+		7F362E321D1C825A001918C7 /* floorplan.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = floorplan.svg; sourceTree = "<group>"; };
+		7F362E331D1C825A001918C7 /* lumpy_donuts.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = lumpy_donuts.svg; sourceTree = "<group>"; };
+		7F362E341D1C825A001918C7 /* lumpy_squares.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = lumpy_squares.svg; sourceTree = "<group>"; };
+		7F362E351D1C825A001918C7 /* square_within_square.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = square_within_square.svg; sourceTree = "<group>"; };
 		7F98D44E1CD1549000A1AEF2 /* DrawSVG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawSVG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F98D4511CD1549000A1AEF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F98D4531CD1549000A1AEF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,7 +66,6 @@
 		7F98D46C1CD154FA00A1AEF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F98D4751CD1555F00A1AEF2 /* PocketSVG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PocketSVG.h; sourceTree = "<group>"; };
 		7F98D4761CD1555F00A1AEF2 /* PocketSVG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PocketSVG.m; sourceTree = "<group>"; };
-		7F98D47B1CD1562F00A1AEF2 /* floorplan.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = floorplan.svg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F362E301D1C825A001918C7 /* SVG_Assets */ = {
+			isa = PBXGroup;
+			children = (
+				7F362E311D1C825A001918C7 /* donut.svg */,
+				7F362E321D1C825A001918C7 /* floorplan.svg */,
+				7F362E331D1C825A001918C7 /* lumpy_donuts.svg */,
+				7F362E341D1C825A001918C7 /* lumpy_squares.svg */,
+				7F362E351D1C825A001918C7 /* square_within_square.svg */,
+			);
+			path = SVG_Assets;
+			sourceTree = "<group>";
+		};
 		7F98D4451CD1549000A1AEF2 = {
 			isa = PBXGroup;
 			children = (
@@ -106,7 +120,7 @@
 		7F98D4501CD1549000A1AEF2 /* DrawSVG */ = {
 			isa = PBXGroup;
 			children = (
-				7F98D47D1CD1563400A1AEF2 /* SVG_Assets */,
+				7F362E301D1C825A001918C7 /* SVG_Assets */,
 				7F98D4511CD1549000A1AEF2 /* AppDelegate.swift */,
 				7F98D4531CD1549000A1AEF2 /* ViewController.swift */,
 				7F98D4551CD1549000A1AEF2 /* Main.storyboard */,
@@ -126,18 +140,6 @@
 				7F98D46C1CD154FA00A1AEF2 /* Info.plist */,
 			);
 			path = PocketSVGFramework;
-			sourceTree = "<group>";
-		};
-		7F98D47D1CD1563400A1AEF2 /* SVG_Assets */ = {
-			isa = PBXGroup;
-			children = (
-				7F21A7C81D1A2FE9005FB0CE /* donut.svg */,
-				7F362E271D1C6EB4001918C7 /* lumpy_squares.svg */,
-				7F21A7C61D1A2F1A005FB0CE /* square_within_square.svg */,
-				7F98D47B1CD1562F00A1AEF2 /* floorplan.svg */,
-			);
-			name = SVG_Assets;
-			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,9 +206,11 @@
 				TargetAttributes = {
 					7F98D44D1CD1549000A1AEF2 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = RZ2DT6A2TM;
 					};
 					7F98D4671CD154FA00A1AEF2 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = RZ2DT6A2TM;
 					};
 				};
 			};
@@ -234,13 +238,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F362E281D1C6EB4001918C7 /* lumpy_squares.svg in Resources */,
-				7F98D47C1CD1562F00A1AEF2 /* floorplan.svg in Resources */,
-				7F21A7C91D1A2FE9005FB0CE /* donut.svg in Resources */,
+				7F362E391D1C825A001918C7 /* lumpy_squares.svg in Resources */,
+				7F362E3A1D1C825A001918C7 /* square_within_square.svg in Resources */,
 				7F98D45C1CD1549000A1AEF2 /* LaunchScreen.storyboard in Resources */,
+				7F362E371D1C825A001918C7 /* floorplan.svg in Resources */,
+				7F362E361D1C825A001918C7 /* donut.svg in Resources */,
 				7F98D4591CD1549000A1AEF2 /* Assets.xcassets in Resources */,
 				7F98D4571CD1549000A1AEF2 /* Main.storyboard in Resources */,
-				7F21A7C71D1A2F1A005FB0CE /* square_within_square.svg in Resources */,
+				7F362E381D1C825A001918C7 /* lumpy_donuts.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,9 +391,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DrawSVG/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.deanza.mtso.DrawSVG;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mtso.DrawSVG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -397,9 +403,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DrawSVG/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.deanza.mtso.DrawSVG;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mtso.DrawSVG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -407,6 +414,7 @@
 		7F98D4721CD154FA00A1AEF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -415,7 +423,7 @@
 				INFOPLIST_FILE = PocketSVGFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.deanza.mtso.PocketSVGFramework;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mtso.PocketSVGFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -427,6 +435,7 @@
 		7F98D4731CD154FA00A1AEF2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -435,7 +444,7 @@
 				INFOPLIST_FILE = PocketSVGFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.deanza.mtso.PocketSVGFramework;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mtso.PocketSVGFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
