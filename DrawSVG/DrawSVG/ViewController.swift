@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        /// Animates the stroking of the CAShapeLayer.
+        /// For animating the stroking of the CAShapeLayer.
         let pathAnimation = CABasicAnimation(keyPath: "strokeEnd")
         pathAnimation.duration = 5
         pathAnimation.fromValue = 0
