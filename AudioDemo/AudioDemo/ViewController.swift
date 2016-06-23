@@ -26,7 +26,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
         playButton.enabled = false
         
         // Set the audio file
-        let directoryURL = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: .UserDomainMask).first as NSURL!
+        let directoryURL = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: .UserDomainMask).first! as NSURL
         let audioFileURL = directoryURL.URLByAppendingPathComponent("MyAudioMemo.m4a")
         
         // Setup audio session
@@ -39,8 +39,8 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
         
         // Define the recorder setting
         let recorderSetting: [String: AnyObject] = [AVFormatIDKey: NSNumber(int: Int32(kAudioFormatMPEG4AAC)),
-            AVSampleRateKey: 44100.0,
-            AVNumberOfChannelsKey: 2]
+                                                    AVSampleRateKey: NSNumber(float: 44100.0),
+                                                    AVNumberOfChannelsKey: NSNumber(int: 2)]
         
         // Initiate and prepare the recorder
         do {
@@ -59,6 +59,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
     }
 
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
+        print("try to alert audio recording finish recording")
         if flag {
             let alertMessage = UIAlertController(title: "Finished Recording", message: "Successfully recorded audio.", preferredStyle: .Alert)
             alertMessage.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))

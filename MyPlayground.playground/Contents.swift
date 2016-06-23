@@ -1,9 +1,12 @@
 //: Playground - noun: a place where people can play
 
-import Darwin
+let a = 0
+let b = 0
 
-let a:Double = 1; let b:Double = -1; let c:Double = -2
-let result = (-b + sqrt(b * b - 4 * a * c)) / (2.0 * a)
+
+if a is b {
+  print("true")
+}
 
 /*
 // Delegation pattern tutorial from RayWenderlich

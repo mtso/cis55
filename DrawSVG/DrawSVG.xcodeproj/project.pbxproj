@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F21A7C71D1A2F1A005FB0CE /* square_within_square.svg in Resources */ = {isa = PBXBuildFile; fileRef = 7F21A7C61D1A2F1A005FB0CE /* square_within_square.svg */; };
+		7F21A7C91D1A2FE9005FB0CE /* donut.svg in Resources */ = {isa = PBXBuildFile; fileRef = 7F21A7C81D1A2FE9005FB0CE /* donut.svg */; };
+		7F362E281D1C6EB4001918C7 /* lumpy_squares.svg in Resources */ = {isa = PBXBuildFile; fileRef = 7F362E271D1C6EB4001918C7 /* lumpy_squares.svg */; };
 		7F98D4521CD1549000A1AEF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98D4511CD1549000A1AEF2 /* AppDelegate.swift */; };
 		7F98D4541CD1549000A1AEF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98D4531CD1549000A1AEF2 /* ViewController.swift */; };
 		7F98D4571CD1549000A1AEF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F98D4551CD1549000A1AEF2 /* Main.storyboard */; };
@@ -45,6 +48,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7F21A7C61D1A2F1A005FB0CE /* square_within_square.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = square_within_square.svg; sourceTree = "<group>"; };
+		7F21A7C81D1A2FE9005FB0CE /* donut.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = donut.svg; sourceTree = "<group>"; };
+		7F362E271D1C6EB4001918C7 /* lumpy_squares.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = lumpy_squares.svg; sourceTree = "<group>"; };
 		7F98D44E1CD1549000A1AEF2 /* DrawSVG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawSVG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F98D4511CD1549000A1AEF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F98D4531CD1549000A1AEF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +131,9 @@
 		7F98D47D1CD1563400A1AEF2 /* SVG_Assets */ = {
 			isa = PBXGroup;
 			children = (
+				7F21A7C81D1A2FE9005FB0CE /* donut.svg */,
+				7F362E271D1C6EB4001918C7 /* lumpy_squares.svg */,
+				7F21A7C61D1A2F1A005FB0CE /* square_within_square.svg */,
 				7F98D47B1CD1562F00A1AEF2 /* floorplan.svg */,
 			);
 			name = SVG_Assets;
@@ -225,10 +234,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F362E281D1C6EB4001918C7 /* lumpy_squares.svg in Resources */,
 				7F98D47C1CD1562F00A1AEF2 /* floorplan.svg in Resources */,
+				7F21A7C91D1A2FE9005FB0CE /* donut.svg in Resources */,
 				7F98D45C1CD1549000A1AEF2 /* LaunchScreen.storyboard in Resources */,
 				7F98D4591CD1549000A1AEF2 /* Assets.xcassets in Resources */,
 				7F98D4571CD1549000A1AEF2 /* Main.storyboard in Resources */,
+				7F21A7C71D1A2F1A005FB0CE /* square_within_square.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +463,7 @@
 				7F98D4621CD1549000A1AEF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F98D4711CD154FA00A1AEF2 /* Build configuration list for PBXNativeTarget "PocketSVGFramework" */ = {
 			isa = XCConfigurationList;
@@ -459,6 +472,7 @@
 				7F98D4731CD154FA00A1AEF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
